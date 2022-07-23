@@ -1,0 +1,34 @@
+[
+    {
+        "sql": "#1",
+        "grpKey":"RETAIL|CUST|39424982|7236454|WIRE|O->B|XA|0008347566433",
+        "alertScenario": "CIB PPA (AC)",
+        "originatorAcctNo": "122-443424-99",
+        "originatorCustNo": "39328861",
+        "beneficiaryAcctNo": "077-897876-33",
+		"beneficiaryCustNo": "0008347566433",
+        "productType": "Wire",
+		"role": "Focus",
+        "numberOfTxns": 13,
+        "inSample": "Y",
+        "usd": "$23,392.45",
+        "tranCurrency": "USD",
+        "insight": "Approved Previously"
+    },
+	{
+        "sql": "#2",
+        "grpKey":"RETAIL|CUST|39424982|7236454|WIRE|O->B|XA|099234564372",
+        "alertScenario": "CIB PPA (AC)",
+        "originatorAcctNo": "122-443424-99",
+        "originatorCustNo": "39328861",
+        "beneficiaryAcctNo":"023-001356-82",
+		"beneficiaryCustNo": "0992345643721",
+        "productType": "Wire",
+		"role": "Focus",
+        "numberOfTxns": 2,
+        "inSample": "Y",
+        "usd": "$3,392.45",
+        "tranCurrency": "AUD",
+        "insight": "Approved Previously but expired"
+    }
+]

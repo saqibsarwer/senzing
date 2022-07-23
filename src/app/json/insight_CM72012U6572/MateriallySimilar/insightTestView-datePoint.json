@@ -1,0 +1,51 @@
+[
+    {
+        "casenumber": "CM72012U6572",
+        "alertScnerio": "CIB PPA (CU)",
+        "totalAlertedamount": "$23,392.45",
+        "recency": "Current",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM20101U2567",
+        "alertScnerio": "CIB PPA (CU)",
+        "totalAlertedamount": "$62,523.45",
+        "recency": "0",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM20110U0568",
+        "alertScnerio": "CIB PPA (AC)",
+        "totalAlertedamount": "$73,243.34",
+        "recency": "1",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM2013U08374",
+        "alertScnerio": "CIB PPA (AC)",
+        "totalAlertedamount": "$54,233.99",
+        "recency": "2",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM28830U1358",
+        "alertScnerio": "CIB PPA (AC)",
+        "totalAlertedamount": "$69,231.02",
+        "recency": "3",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM22022U4888",
+        "alertScnerio": "CIB PPA (AC)",
+        "totalAlertedamount": "$33,001.10",
+        "recency": "4",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM99022U4568",
+        "alertScnerio": "CIB PPA (AC)",
+        "totalAlertedamount": "$43,213.00",
+        "recency": "5",
+        "rounding": "No"
+    }
+]

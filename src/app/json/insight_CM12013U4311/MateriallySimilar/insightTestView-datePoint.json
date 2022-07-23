@@ -1,0 +1,51 @@
+[
+    {
+        "casenumber": "CM12013U4311",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$78,000",
+        "recency": "Current",
+        "rounding": "Yes"
+    },
+    {
+        "casenumber": "CM45676U1111",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$2,523.45",
+        "recency": "0",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM56110U2222",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$5,243.34",
+        "recency": "1",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM34344U4444",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$9,233.99",
+        "recency": "2",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM28830U5555",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$12,123",
+        "recency": "3",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM23434U9888",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$1,001.10",
+        "recency": "4",
+        "rounding": "No"
+    },
+    {
+        "casenumber": "CM13345U0001",
+        "alertScnerio": "RMF",
+        "totalAlertedamount": "$3,213.00",
+        "recency": "5",
+        "rounding": "No"
+    }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "entityType": "Consumer",
+    "relation": "Derived",
+    "accountNo": "18649998",
+    "customerNo": "0099834756",
+    "name": "BakersDel Yummy ltd",
+    "address": "Unit 3 22 Market Street, Rosedale, QLD, 4674",
+    "type": "Possibly Related",
+    "geo": "Geo",
+    "insight": "Related Entity in Black List",
+    "memo": "Related Entity Name "
+  },
+  {
+    "entityType": "Wealth",
+    "relation": "Derived",
+    "accountNo": "009838377",
+    "customerNo": "0099342499",
+    "name": "Berth Castangia",
+    "address": "Unit 2/10 Zircon Circuit, Rosedale, QLD, 4674",
+    "type": "Focus",
+    "geo": "Geo",
+    "insight": "Entity Escalated in last 12 Months",
+    "memo": "Case No : CM43545U9992"
+  }
+
+]

@@ -1,0 +1,42 @@
+[
+  {
+      "currency": "USD,SGD,KRW",
+      "rndTxn": "0",
+      "nonRndTxn": "100",
+      "rndTxn_1": "0",
+      "rndTxn_4": "0",
+      "rndTxn_99": "0"
+  },
+  {
+     "currency": "USD,AUD,SGD",
+      "rndTxn": "0",
+      "nonRndTxn": "100",
+      "rndTxn_1": "0",
+      "rndTxn_4": "0",
+      "rndTxn_99": "0"
+  },
+  {
+     "currency": "USD,AED",
+      "rndTxn": "0",
+      "nonRndTxn": "100",
+      "rndTxn_1": "0",
+      "rndTxn_4": "0",
+      "rndTxn_99": "0"
+  },
+  {
+     "currency": "USD,COP",
+      "rndTxn": "0",
+      "nonRndTxn": "100",
+      "rndTxn_1": "0",
+      "rndTxn_4": "0",
+      "rndTxn_99": "0"
+  },
+  {
+      "currency": "USD,MYR",
+      "rndTxn": "0",
+      "nonRndTxn": "100",
+      "rndTxn_1": "0",
+      "rndTxn_4": "0",
+      "rndTxn_99": "0"
+  }
+]

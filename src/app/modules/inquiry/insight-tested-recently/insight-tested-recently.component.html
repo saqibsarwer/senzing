@@ -1,0 +1,220 @@
+<div class="right-content">
+    <section>
+        <div class="boxed-card">
+            <div class="card primary-card mb-4 header">
+                <div class="row">
+                    <div class="d-flex align-items-center justify-content-between flex-row">
+                        <div class="col-4 back d-flex">
+                            <a [routerLink]="getBackLink()"><img
+                                    src="../../../../assets/backArrow.png" class="mr-2" />Back to insight details</a>
+                            <p class="text m-0">The case under investigation - <span>{{ showTab==2 ? showCase : 'CM72012U6572'}}</span></p>
+
+                        </div>
+                        <div class="col-4 back d-flex"><p class="text m-0">The pair profile is <span style="color: #2FB655;">materially similar</span> to its past approved behavior</p></div>
+                        <div class="col-4 text-right">
+                            <button id="focusProfile" [routerLink]="getLinkView()">Characterization Profile</button>
+                            <button id="download"><img src="../../../../assets/downloadDetails.png" /> Download</button>
+                            <button id="print"><img src="../../../../assets/print.png" /> Print</button>
+                        </div>
+                        <!-- <div class="dropdown">
+                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Basic Details
+                         </button>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Basic Details</a>
+                            <a class="dropdown-item" href="#" [routerLink]="'/inquiry/details/insight-details'">Insight
+                               Details</a>
+                            <a class="dropdown-item" href="#">Focus Risk</a>
+                            <a class="dropdown-item" href="#">Counter Party Details</a>
+                         </div>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="card-details">
+
+                <div class="row">
+                    <div class="col-4 col-xl-5 responsive-column1">
+                      <div class="heading d-flex">
+                        <img class="icon-img" src="../../../../assets/bubble.png" />
+                        <p class="ml-2">Eligible Data Points And Rounding</p>
+                        <img class="icon-img greenTick" src="../../../../assets/green-tick.png" />
+                    </div>
+                        <div class="card primary-card mt-2 pb-0">
+                            <div class="card-body p-0" style="min-height: 415px;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"class="headingWidth">Case No</th>
+                                            <th scope="col"class="headingWidth">Alert Scnerio</th>
+                                            <th scope="col" class="headingWidth">Total Alerted Amount</th>
+                                            <th scope="col" class="headingWidth">Recency (Month)</th>
+                                            <th scope="col">Rounding</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let data of getdatePoint">
+                                            <td>{{ data.casenumber }}</td>
+                                            <td>{{ data.alertScnerio }}</td>
+                                            <td>{{ data.totalAlertedamount }}</td>
+                                            <td>{{ data.recency }}</td>
+                                            <td style="color: #2FB655;">{{ data.rounding }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-xl-3 responsive-column1">
+
+                        <div class="heading d-flex">
+                            <img class="icon-img" src="../../../../assets/bubble.png" />
+                            <p class="ml-2">IQR Based on Case History</p>
+                            <img class="icon-img greenTick" src="../../../../assets/green-tick.png" />
+                        </div>
+                        <div class="card primary-card mt-2">
+                            <div class="card-body p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Quartile</th>
+                                            <th scope="col">Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let iqrData of getiqr">
+                                            <td>{{ iqrData.quartile }}</td>
+                                            <td>{{ iqrData.amount }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table mb-1">
+                                  <thead>
+                                      <tr>
+                                          <th scope="col">3rd Quartile Adjustment Calculation</th>
+                                          <th scope="col"></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr *ngFor="let quartData of getquart">
+                                          <td>{{ quartData.quartile }}</td>
+                                          <td [ngClass]="{ 'green' : quartData.amount == '$141,690' }">{{ quartData.amount }}</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 responsive-column1">
+                        <div class="heading d-flex">
+                            <img class="icon-img" src="../../../../assets/bubble.png" />
+                            <p class="ml-2">Interquartile Range</p>
+                            <img class="icon-img greenTick" src="../../../../assets/green-tick.png" />
+                        </div>
+                        <div class="card primary-card mt-2">
+                          <div style="text-align:center">
+                            <apx-chart [ngClass]="showCase ? 'graphColorRed' : 'graphColorGreen'"
+                              [series]="chartOptions.series"
+                              [chart]="chartOptions.chart"
+                              [xaxis]="chartOptions.xaxis"
+                              [title]="chartOptions.title"
+                            ></apx-chart>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 responsive-column2">
+                        <div class="heading d-flex">
+                            <img class="icon-img" src="../../../../assets/bubble.png" />
+                            <p class="ml-2">Counterparty Geo Risk</p>
+                            <img class="icon-img greenTick" src="../../../../assets/green-tick.png" />
+                        </div>
+                        <div class="card primary-card mt-2 pb-0">
+                            <div class="card-body p-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Case No</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Case Date</th>
+                                            <th scope="col" class="headingWidth">CParty Geo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                          <td>{{ showTab==2 ? showCase : 'CM72012U6572'}}</td>
+                                          <td style="color: #2FB655;">Current</td>
+                                          <td>01 Mar 22</td>
+                                          <td>AU(1)</td>
+                                        </tr>
+                                        <tr>
+                                          <td>CM20101U2567</td>
+                                          <td style="color: #2FB655;">Close & Clear</td>
+                                          <td>12 Feb 22</td>
+                                          <td>AU(1)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 responsive-column2">
+                      <div class="heading d-flex">
+                          <img class="icon-img" src="../../../../assets/bubble.png" />
+                          <p class="ml-2">Transaction Party Details</p>
+                          <img class="icon-img greenTick" src="../../../../assets/green-tick.png" />
+                      </div>
+                      <div class="card primary-card mt-2 pb-0">
+                          <div class="card-body p-0">
+                              <table class="table">
+                                  <thead>
+                                      <tr>
+                                          <th scope="col">Case No</th>
+                                          <th scope="col">Name</th>
+                                          <th scope="col">Account No</th>
+                                          <th scope="col">Type</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                        <td>{{ showTab==2 ? showCase : 'CM72012U6572'}}</td>
+                                        <td>Beth Castangia</td>
+                                        <td>122-443424-99</td>
+                                        <td>Focus</td>
+                                      </tr>
+                                      <tr>
+                                        <td>CM72012U6572</td>
+                                        <td>Adelaide Advertising Pvt Ltd.</td>
+                                        <td>077-897876-33</td>
+                                        <td>Counter-party</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-4 responsive-column6">
+                        <div class="card-details">
+                            <div class="heading d-flex">
+                                <img class="icon-img" src="../../../../assets/bubble.png" />
+                                <p class="ml-2">Notes & Your Impression</p>
+                            </div>
+                            <div class="card primary-card mt-2">
+                                <div class="form-group mb-0">
+                                    <label for="exampleTextarea">Type your notes</label>
+                                    <textarea class="form-control" id="exampleTextarea"
+                                        rows="3">Details look Okay from Ops side</textarea>
+                                    <img src="../../../../assets/paperclip.png" alt="">
+                                    <button class="focusProfile">Submit Files</button>
+                                    <label class="back" style="float: right; margin-top: 20px;"><p class="text m-0">Your research feedback! 😀 😞</p></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

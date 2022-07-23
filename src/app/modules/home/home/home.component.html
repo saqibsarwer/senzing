@@ -1,0 +1,307 @@
+<div class="right-content">
+  <section class="">
+    <div class="boxed-card pb-4">
+      <div class="card-details">
+        <div class="heading d-flex">
+          <img class="icon-img" src="../../../../assets/bubble.png" />
+          <p class="ml-2">Case Closure Report (BAU)</p>
+        </div>
+        <div class="card primary-card info mt-2 pb-0 tabs-view">
+          <div class="card-body p-0">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Month</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Cases</th>
+                  <th scope="col">Total Trans Pair</th>
+                  <th scope="col">In Sample Trans Pairs</th>
+                  <th scope="col">Seen In Last 6 Mo Trans Pairs</th>
+                  <th scope="col"># Of New Paris Included</th>
+                  <th scope="col">Escalated Discover</th>
+                  <th scope="col">Other Action Taken</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of getincreaseQuality">
+                  <td>{{ data.month }}</td>
+                  <td>{{ data.country }}</td>
+               
+                  <td id="sucess">{{ data.cases }} </td>
+                  <td>{{ data.stdProcessTransPairToReview }}</td>
+                  <td>{{ data.recommendedTransPairTo }}</td>
+                  <td>{{ data.mTransPairTo }}</td>
+                  <td>{{ data.ofNewParisincluded }}</td>
+                 <td> <span
+              [ngClass]="{
+                'bgdataOne success': data.isRecsar === 'success',
+                'bgdataOne error': data.isRecsar === 'error',
+                'bgdataOne warning': data.isRecsar === 'warning'
+              }"
+              >{{ data.rescarDiscover }}</span
+            ></td>
+
+            <td>
+            <span
+            *ngIf="
+            data.isAction !== 'error' && data.isAction !== 'warning'
+            "
+            [ngClass]="{
+              'bgdataOne success': data.isAction === 'success'
+            }"
+            >{{ data.otherActionTaken
+            }}<img src="../../../../assets/{{ data.image }}" alt=""
+          /></span>
+          <span
+            *ngIf="data.isAction === 'error'"
+            [ngClass]="{ 'bgdataOne error': data.isAction === 'error' }"
+            >{{ data.otherActionTaken
+            }}<img src="../../../../assets/{{ data.image }}" alt=""
+          /></span>
+          <span
+            *ngIf="data.isAction === 'warning'"
+            [ngClass]="{
+              'bgdataOne warning': data.isAction === 'warning'
+            }"
+            >{{ data.otherActionTaken
+            }}<img src="../../../../assets/{{ data.image }}" alt=""
+          /></span>
+
+        </td>  
+                  <!-- <td>{{ data.otherActionTaken }}</td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link">
+                  <img src="../../../../assets/arrow-end-left.png" />
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link active">1</a></li>
+              <li class="page-item"><a class="page-link">2</a></li>
+              <li class="page-item"><a class="page-link">3</a></li>
+              <li class="page-item">
+                <a class="page-link">
+                  <img src="../../../../assets/arrow-end-right.png" />
+                </a>
+              </li>
+              <li class="pagintion-select">
+                <mat-paginator
+                  [length]="10"
+                  [pageSizeOptions]="[10, 50, 100]"
+                  aria-label="Select page"
+                  disabled
+                ></mat-paginator>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="card-details mt-5">
+          <div class="heading d-flex">
+            <img class="icon-img" src="../../../../assets/bubble.png" />
+            <p class="ml-2">Efficiency Improvement Report (With ANT)</p>
+          </div>
+          <div class="card primary-card info mt-2 pb-0 tabs-view">
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Month</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Hub</th>
+                    <th scope="col">Total Cases without ANT</th>
+                    <th scope="col">Average Time/Case (Actual)</th>
+                    <th scope="col">Total Cases with ANT</th>
+                    <th scope="col">Average Time/Case (Actual)</th>
+                    <th scope="col">Time Saving/Case</th>
+                    <th scope="col">%Saved</th>
+                    <th scope="col">Ops Comments</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of getaeAnalysis">
+                    <td>{{ data.month }}</td>
+                    <td>{{ data.country }}</td>
+                    <td>
+                      <span
+                      [ngClass]="{
+                        'bgdataOne success': data.isDesk === 'success',
+                        'bgdataOne error': data.isDesk === 'error',
+                        'bgdataOne warning': data.isDesk === 'warning'
+                      }"
+                      >{{ data.desk }}</span>
+                    </td>
+                    <td>{{ data.totalCases }}</td>
+                    <td>{{ data.averageTime }}</td>
+                    <td>{{ data.timeTestedCases }}</td>
+                    <td>{{ data.totalActualTime }}</td>
+                    <td>
+                    <span
+                    [ngClass]="{
+                      success1: data.isActual === 'success',
+                      error2: data.isActual === 'error',
+                      warning3: data.isActual === 'warning'
+                    }"
+                    >{{ data.averageTimeCase }}</span
+                  >
+                </td>
+                  <td>
+                  <span
+                  [ngClass]="{
+                    success1: data.isActual === 'success',
+                    error2: data.isActual === 'error',
+                    warning3: data.isActual === 'warning'
+                  }">
+                    {{ data.saved }}</span></td>
+                  <td>{{ data.comments }}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link">
+                    <img src="../../../../assets/arrow-end-left.png" />
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link active">1</a></li>
+                <li class="page-item"><a class="page-link">2</a></li>
+                <li class="page-item"><a class="page-link">3</a></li>
+                <li class="page-item">
+                  <a class="page-link">
+                    <img src="../../../../assets/arrow-end-right.png" />
+                  </a>
+                </li>
+                <li class="pagintion-select">
+                  <mat-paginator
+                    [length]="10"
+                    [pageSizeOptions]="[10, 50, 100]"
+                    aria-label="Select page"
+                    disabled
+                  ></mat-paginator>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="card-info pt-5 pb-4 second-row">
+          <div class="card-info-single bg-white"  *ngFor="let user of getuserProgress">
+            <div class="">
+              <div class="d-flex flex-row align-items-center">          
+                <div class="card-header bg-white d-flex w-100 justify-content-between align-items-center py-3">
+                  <div class="d-flex align-items-center">
+                  <img class="mr-2" src="../../../../assets/{{user.image}}" />
+                  <div class="">
+                  <h4>{{ user.userName }}</h4>
+                  <small class="">{{ user.designation }}</small>
+                  </div>
+                </div>
+                  <div class="badges">
+                    <span
+                      [ngClass]="{
+                        badge: user.quality === 'BEST',
+                        avarage: user.quality === 'AVERAGE',
+                        notGood: user.quality === 'ATTENTION'
+                      }"
+                      >{{ user.quality }}</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- [percent]=user.percent -->
+
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <!-- <circle-progress
+                  [percent]=user.percent
+                  [radius]="20"
+                  [outerStrokeWidth]="2"
+                  [innerStrokeWidth]="0"
+                  [outerStrokeColor]="'#78C000'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                ></circle-progress> -->
+
+
+                <div class="d-flex align-items-center ">
+                  <div
+                    class="progress mr-2 mb-0"
+                    [ngClass]="{
+                      success: user.percent > 70,
+                      warning: user.percent <= 70 && user.percent >= 50,
+                      error: user.percent < 50
+                    }"
+                  >
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">{{ user.percent }}%</div>
+                  </div>
+
+                
+              
+
+                <div class="graph-values">
+                  <h2>{{ user.time }}</h2>
+                  <p
+                    [ngClass]="{
+                      badge: user.valueClass === 'BEST',
+                      avarage: user.valueClass === 'AVARAGE',
+                      notGood: user.valueClass === 'ATTENTION'
+                    }"
+                  > 
+                  </p>
+                </div>
+              </div>
+                  <div class="time">
+                    <span><small class="">Average time:</small></span>
+                    <p class="p1 mb-0">{{ user.averageTime }}</p>
+
+                    <p
+                    [ngClass]="{
+                      badges: user.valueClass === 'BEST',
+                      averages: user.valueClass === 'AVARAGE',
+                      notGoods: user.valueClass === 'NOT GOOD'
+                    }"
+                  >
+                    <img
+                      src="../../../../assets/{{ user.valueArrow }}"
+                      alt=""
+                      class="mr-2"
+                    />
+                    {{ user.value }}%
+                  </p>
+
+                    <!-- <span> {{ user.value }}%
+                    <img  src="../../../../assets/{{ user.valueArrow }}" alt="" /></span> -->
+
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white p-0">
+                <p class="m-0"><img src="../../../../assets/baseline_insert_invitation_black_24dp.png" alt="">{{ user.daysLeft }}</p>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- </div> -->
+
+    </div>
+  </section>
+</div>

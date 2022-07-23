@@ -1,0 +1,27 @@
+[
+    {
+        "entityType":"SA",
+        "acNo":"15-6079-92",
+        "names":"Kusha Mary",
+        "address":"Unit 14-5A, Persiaran capSquare, off jalan Munshi Abdullah kuala Lumpur"
+    },
+    {
+        "entityType":"CA",
+        "acNo":"11-6305-43",
+        "names":"Kusha Marie",
+        "address":"14/5A. Persiaran cansauare. Or Jalan Muns Abd. L. MY"
+    },
+    {
+        "entityType":"Wealth",
+        "acNo":"85-8870-31",
+        "names":"Kusha Mary",
+        "address":"Unit 64 98 Shirley Street, Spring Hill, QLD 4209 AU"
+    },
+    {
+        "entityType":"CC",
+        "acNo":"11-0762-43",
+        "names":"Kusha Marie",
+        "address":"19/2 Bruford St, Muttaburra, QLD, 4732, AUS"
+    }
+
+]

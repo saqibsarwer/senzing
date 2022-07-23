@@ -1,0 +1,134 @@
+.header
+{
+  padding: 24px 20px;
+  .back{
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #3B495B;
+      border-bottom: 1px dashed #3B495B;
+      text-decoration: none;
+      padding: 0 0 2px 0px;
+      vertical-align: center;
+      text-align:center;
+  }
+  .text{
+    font-weight: 400;
+      font-size: 14px;
+      vertical-align: center;
+      text-align:center;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #3B495B;
+      margin-left: 50px !important;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.card-details{
+  .heading{
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+      color: #3B495C;
+      margin: 0;
+      vertical-align: center;
+      text-align:center;
+    }
+  }
+  }
+  a.color-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    // display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    vertical-align: center;
+    text-align:center;
+    color: #850101;
+    text-decoration: none;
+    background: rgba(237, 155, 17, 0.08);
+    border: 1px solid rgba(237, 155, 17, 0.35);
+    span {
+      border-bottom: 1px dotted #850101;
+    }
+  }
+
+  /* Dropdown */
+
+  .dropdown-item {
+    padding: 1.25rem 1.75rem;
+    font-size: 13px;
+  }
+
+  .dropdown-item.active {
+    background-color: #fff;
+    color: #FF6600;
+  }
+
+  .dropdown-toggle::after {
+    background: url(../../../../assets/down-arrow.svg) center no-repeat;
+    width: 20px;
+    height: 20px;
+    border: none;
+    position: absolute;
+    margin-left: 15px;
+  }
+
+  button#dropdownMenuButton {
+    border: 1px solid #fff;
+    filter: drop-shadow(0px 1px 2px rgba(30, 56, 114, 0.17));
+    border-radius: 4px;
+    background: #fff;
+    padding: 8px 40px 8px 0px;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    width: 160px;
+  }
+
+  #focusProfile {
+    border: 1px solid #FF6600;
+    border-radius: 4px;
+    background: #FF6600;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+  }
+
+  button#download {
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+    margin: 0 10px;
+  }
+
+  #print {
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+  }
+
+  /* Dropdown */

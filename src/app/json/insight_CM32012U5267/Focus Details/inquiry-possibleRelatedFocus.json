@@ -1,0 +1,30 @@
+[
+    {
+        "product": "MF",
+        "acNo": "17678456",
+        "names": "Miss. Kusha Barrett Mark",
+        "address": "1304 Poppy Hills Dr, Blacklick, OH, 43004, USA",
+        "tenure":"12"
+    },
+    {
+        "product": "TD",
+        "acNo": "15-1616-44",
+        "names": "Kusha Marsha",
+        "address": "1304 Poppy Hills Dr, Blacklick, OH, 43004, USA",
+        "tenure":"0"
+    },
+    {
+        "product": "MF",
+        "acNo": "00786499",
+        "names": "Smith Bob",
+        "address": "1304 Poppy Hills Dr, Blacklick, OH, USA",
+        "tenure":"14"
+    },
+    {
+        "product": "LN",
+        "acNo": "834757684",
+        "names": "Smith Robert",
+        "address": "123 Main Street, Las Vegas NV 89132",
+        "tenure":"15"
+    }
+]

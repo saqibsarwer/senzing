@@ -1,0 +1,64 @@
+[
+  {
+    "caseNo": "CM2334U2225",
+    "alertScnerio": "CIB PPA (AC)",
+    "status": "Closed",
+    "description": "ESCALATED",
+    "totalAmount": "$1,500",
+    "caseDate": "3/11/22",
+    "analyst": "KL745643",
+    "role": "Focus",
+	"relation": "Exactly Same Entity",
+    "comments": "The Focus Income Statement Was Fraudent. All The Clients Of Focus Had The Same \"Secretary\". We Have Raised It To The Operation Head-On Status Call(15-02-2021). The Report Has Been Attached With The Case."
+  },
+  {
+    "caseNo": "CM20101U2567",
+    "alertScnerio": "CIB PPA (CU)",
+    "status": "Closed",
+    "description": "Closed & Clear",
+    "totalAmount": "$62,523.45",
+    "caseDate": "12 Feb 22",
+    "analyst": "K1715612",
+    "role": "Focus",
+    "relation": "Exactly Same Entity",
+    "comments": "All Relevant Pairs Tested, No Change In Behavior"
+
+  },
+  {
+    "caseNo": "CM20110U0568",
+    "alertScnerio": "CIB PPA (AC)",
+    "status": "Closed",
+    "description": "Closed & Clear",
+    "totalAmount": "$73,243.34",
+    "caseDate": "10 Jan 22",
+    "analyst": "DM8743",
+    "role": "Counter-party",
+    "relation": "Exactly Same Entity",
+    "comments": "All Relevant Pairs Tested, No Change In Behavior"
+  },
+  {
+    "caseNo": "CM2013U08374",
+    "alertScnerio": "CIB PPA (AC)",
+    "status": "Closed",
+    "description": "Closed & Clear",
+    "totalAmount": "$54,233.99",
+    "caseDate": "5 DEC 22",
+    "analyst": "DM8743",
+    "role": "Counter-party",
+    "relation": "Exactly Same Entity",
+    "comments": "All Relevant Pairs Tested, No Change In Behavior"
+  },
+  {
+    "caseNo": "CM20130U3569",
+    "alertScnerio": "FTN",
+    "status": "Closed",
+    "description": "Autoclosed",
+    "totalAmount": "$65,231.12",
+    "caseDate": "8 Feb 22",
+    "analyst": "SYSTEM",
+    "role": "Focus",
+    "relation": "Exactly Same Entity",
+    "comments": "System closure"
+  }
+
+]

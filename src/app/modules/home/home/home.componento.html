@@ -1,0 +1,153 @@
+<div class="right-content">
+  <section class="">
+    <div class="boxed-card pb-4">
+      <div class="card-details">
+        <div class="heading d-flex pt-10 pb-10">
+          <img class="icon-img" src="../../../../assets/bubble.png" />
+          <p class="ml-2">Increased Quality Of Casework</p>
+        </div>
+        <div class="card primary-card info mt-2 pb-0 tabs-view">
+          <div class="card-body p-0">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Month</th>
+                  <th scope="col">country</th>
+                  <th scope="col">cases</th>
+                  <th scope="col">Std Process Trans Pair To Review</th>
+                  <th scope="col">Recommended Trans Pairs To</th>
+                  <th scope="col"># Of Paris Included</th>
+                  <th scope="col">Recsar Discover</th>
+                  <th scope="col">Other Action Taken</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of getincreaseQuality">
+                  <td>{{ data.month }}</td>
+                  <td>{{ data.country }}</td>
+                  <td>{{ data.cases }}</td>
+                  <td>{{ data.stdProcessTransPairToReview }}</td>
+                  <td>{{ data.recommendedTransPairTo }}</td>
+                  <td>{{ data.ofNewParisincluded }}</td>
+                  <td>{{ data.rescarDiscover }}</td>
+                  <td>{{ data.otherActionTaken }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card-details">
+          <div class="heading d-flex pt-20 pb-10">
+            <img class="icon-img" src="../../../../assets/bubble.png" />
+            <p class="ml-2">Analyst Efficiency Analysis</p>
+          </div>
+          <div class="card primary-card info mt-2 pb-0 tabs-view">
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Month</th>
+                    <th scope="col">country</th>
+                    <th scope="col">Desk</th>
+                    <th scope="col">Total Cases</th>
+                    <th scope="col">Average Time</th>
+                    <th scope="col">Total Times (Mins)</th>
+                    <th scope="col">#Time Tested Cases</th>
+                    <th scope="col">Total Actual Time</th>
+                    <th scope="col">Average Time/Case</th>
+                    <th scope="col">Time Saving/Case</th>
+                    <th scope="col">%Saved</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of getaeAnalysis">
+                    <td>{{ data.month }}</td>
+                    <td>{{ data.country }}</td>
+                    <td>{{ data.desk }}</td>
+                    <td>{{ data.totalCases }}</td>
+                    <td>{{ data.averageTime }}</td>
+                    <td>{{ data.totalTime }}</td>
+                    <td>{{ data.timeTestedCases }}</td>
+                    <td>{{ data.totalActualTime }}</td>
+                    <td>{{ data.averageTimeCase }}</td>
+                    <td>{{ data.timeSavingCase }}</td>
+                    <td>{{ data.saved }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row pt-4 pb-4 second-row"
+
+      >
+        <div class="col-2 responsive-column4"  *ngFor="let user of getuserProgress">
+          <div class="card primary-card mt-2 pb-0">
+            <div class="d-flex flex-row align-items-center">
+              <img class="mr-2" src="../../../../assets/{{user.image}}" />
+              <div class="card-details">
+                <h4>{{ user.userName }}</h4>
+                <small class="">{{ user.designation }}</small>
+              </div>
+
+              <div class="badges">
+                <span
+                  [ngClass]="{
+                    badge: user.quality === 'BEST',
+                    average: user.quality === 'AVERAGE',
+                    notGood: user.quality === 'NOT GOOD'
+                  }"
+                  >{{ user.quality }}</span
+                >
+              </div>
+
+            </div>
+            <div class="card-body">
+              <div class="mt-4">
+                <circle-progress
+                  [percent]="97"
+                  [radius]="20"
+                  [outerStrokeWidth]="2"
+                  [innerStrokeWidth]="0"
+                  [outerStrokeColor]="'#78C000'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                ></circle-progress>
+
+                <div class="graph-values">
+                  <h2>{{ user.time }}</h2>
+                  <p
+                    [ngClass]="{
+                      badge: user.valueClass === 'BEST',
+                      average: user.valueClass === 'AVERAGE',
+                      notGood: user.valueClass === 'NOT GOOD'
+                    }"
+                  >
+
+                    {{ user.value }}%
+                    <img
+                    src="../../../../assets/{{ user.valueArrow }}"
+                    alt=""
+                  />
+                  </p>
+                </div>
+                <!-- <div class="time text-right">
+                  <span>Average time:</span>
+                  <span>{{ user.averageTime }}</span>
+                </div> -->
+
+
+                <!-- <p>Average Time: 40min / case</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

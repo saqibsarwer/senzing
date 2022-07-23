@@ -1,0 +1,78 @@
+[
+    {
+        "caseNo": "CM12013U4311",
+        "date": "25 Feb 22",
+        "status": "Open",
+        "scenario": "RMF",
+        "counterGeoRik": "AU(1)",
+        "noTransaction": 5,
+        "totalAmount": "$78,000",
+        "rounding": "No",
+		"CrAmt":"800,000.25" ,
+		"MinTxnAmt": "1,123.22" ,
+		"MaxTxnAmt": "12,343.44" ,
+		"CrTxn": "100",
+		"inSample":"Y"
+		
+    },
+    {
+        "caseNo": "CM24353U8989",
+        "date": "3 Nov 21",
+        "status": "Escalated",
+        "scenario": "RMF",
+        "counterGeoRik": "AU(1)",
+        "noTransaction": 1,
+        "totalAmount": "$1,502.23",
+        "rounding": "No",
+		"CrAmt":"1,502.23" ,
+		"MinTxnAmt": "1,502.23" ,
+		"MaxTxnAmt": "1,502.23" ,
+		"CrTxn": "100",
+		"inSample":"Y"
+    },
+    {
+        "caseNo": "CM45676U1111",
+        "date": "8 Feb 22",
+        "status": "Closed & clear",
+        "scenario": "RMF",
+        "counterGeoRik": "AU(1)",
+        "noTransaction": 3,
+        "totalAmount": "$2,523.45",
+        "rounding": "No",
+		"CrAmt":"2,523.45" ,
+		"MinTxnAmt": "123.22" ,
+		"MaxTxnAmt": "1500" ,
+		"CrTxn": "100",
+		"inSample":"Y"
+    },
+    {
+        "caseNo": "CM56110U2222",
+        "date": "6 Jan 22",
+        "status": "Closed & clear",
+        "scenario": "RMF",
+        "counterGeoRik": "AU(1)",
+        "noTransaction": 1,
+        "totalAmount": "$5,243.34",
+        "rounding": "No",
+		"CrAmt":"5,243.34" ,
+		"MinTxnAmt": "5,243.34" ,
+		"MaxTxnAmt": "5,243.34" ,
+		"CrTxn": "100",
+		"inSample":"Y"
+    },
+    {
+        "caseNo": "CM34344U4444",
+        "date": "4 Dec 21",
+        "status": "Closed & clear",
+        "scenario": "RMF",
+        "counterGeoRik": "AU(1)",
+        "noTransaction": 5,
+        "totalAmount": "$9,233.99",
+        "rounding": "No",
+		"CrAmt":"1,234.23" ,
+		"MinTxnAmt": "1,234.23" ,
+		"MaxTxnAmt": "2,573.45" ,
+		"CrTxn": "100",
+		"inSample":"Y"
+    }
+]

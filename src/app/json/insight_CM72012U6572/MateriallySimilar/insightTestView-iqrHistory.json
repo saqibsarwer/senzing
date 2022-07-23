@@ -1,0 +1,14 @@
+[
+    {
+        "quartile": "1st Quartile",
+        "amount": "$35,554"
+    },
+    {
+        "quartile": "3rd Quartile",
+        "amount": "$67,554"
+    },
+    {
+        "quartile": "Interquartile Range",
+        "amount": "$36,229"
+    }
+]

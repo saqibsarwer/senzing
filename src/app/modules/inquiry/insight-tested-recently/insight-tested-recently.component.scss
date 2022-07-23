@@ -1,0 +1,284 @@
+.header{
+    padding: 20px 20px;
+  .back{
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #3B495B;
+      border-bottom: 1px dashed #3B495B;
+      text-decoration: none;
+      padding: 0 0 5px 0px;
+  }
+  .text{
+    font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #3B495B;
+      margin-left: 50px !important;
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+  button#dropdownMenuButton {
+    border: 1px solid rgba(113, 130, 153, 0.15);
+    filter: drop-shadow(0px 1px 2px rgba(30, 56, 114, 0.17));
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px 15px;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #focusProfile{
+    border: 1px solid #FF6600;
+    border-radius: 4px;
+    background: #FF6600;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+  }
+  button#download {
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+    margin: 0 10px;
+  }
+  #print{
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+  }
+  }
+
+  .card-details{
+    .heading{
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+        color: #3B495C;
+        margin: 0;
+      }
+    }
+    }
+    p.top-heading {
+        background: rgba(255, 102, 0, 0.06);
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+        color: #FF6600;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+      kendo-dropdownlist{
+        visibility: hidden;
+      }
+
+
+      :host ::ng-deep .k-chart-surface svg {
+        min-height: 283px !important;
+      }
+
+      :host ::ng-deep .apexcharts-legend {
+        display: none;
+      }
+
+      :host ::ng-deep .apexcharts-data-labels [id^=SvgjsText] {
+        font-size: 0;
+      }
+
+      :host ::ng-deep  [id^=SvgjsLinearGradient]:first-of-type   {
+        display: none;
+      }
+
+      :host ::ng-deep .graphColorGreen [id^=SvgjsLinearGradient]:last-of-type stop   {
+        stop-color: rgba(128,255,128,0.5);
+      }
+
+      :host ::ng-deep .graphColorRed [id^=SvgjsLinearGradient]:last-of-type stop   {
+        stop-color: rgba(255,128,128,0.5);
+      }
+
+      :host ::ng-deep .apexcharts-gridlines-horizontal .apexcharts-gridline {
+        display: none;
+     }
+
+      // :host ::ng-deep [id^=SvgjsPath]:last-of-type   {
+      //   stroke: transparent;
+      // }
+
+
+
+      .responsive-column6 {
+        label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          color: rgba(35, 46, 104, 0.69);
+        }
+
+        textarea#exampleTextarea {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #3B495B;
+          padding: 15px;
+          height: 90px;
+          resize: none;
+        }
+
+        .focusProfile {
+          border: 1px solid #FF6600;
+          border-radius: 4px;
+          background: #FF6600;
+          color: #fff;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 6px 14px;
+          margin: 13px 0 0 16px;
+        }
+      }
+
+      .responsive-column1 {
+        .primary-card {
+          min-height: 323px;
+          margin-bottom: 10px;
+        }
+        .col-data {
+          width: 33.3%;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+
+        .info {
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        h5 {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: #8E9EB5;
+          margin-bottom: 0px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: #3B495B;
+          margin: 0;
+        }
+      }
+
+      .responsive-column2 {
+        .primary-card {
+          min-height: 203px;
+        }
+        .col-data {
+          width: 33.3%;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+
+        .info {
+          img {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        h5 {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: #8E9EB5;
+          margin-bottom: 0px;
+        }
+
+        p {
+          font-weight: 400;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 20px;
+          color: #3B495B;
+          margin: 0;
+        }
+
+        .green-button  {
+          background-color: #19AE43;
+          text-align: center;
+          height: 50px;
+          border-radius: 4px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 16px;
+          text-transform: capitalize;
+          color: #FFFFFF;
+          margin: 20px 0;
+        }
+
+        .red-button  {
+          background-color: #FF0000;
+          text-align: center;
+          height: 50px;
+          border-radius: 4px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 16px;
+          text-transform: capitalize;
+          color: #FFFFFF;
+        }
+
+      }
+
+      .orange {
+        color: #FF6600;
+      }
+      .green {
+        color: #2FB655;
+      }
+      
+      .headingWidth {
+        min-width: 72px;
+        white-space: pre-line;
+      }
+
+      .greenTick {
+        right: 30px;
+        position: absolute;
+        top: 15px;
+        z-index: 1;
+      }

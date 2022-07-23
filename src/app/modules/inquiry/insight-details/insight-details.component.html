@@ -1,0 +1,258 @@
+<div class="right-content">
+   <section class="">
+      <div class="boxed-card pb-4">
+         <div class="card primary-card mb-4 header">
+            <div class="row">
+              <div class="d-flex">
+                <div class="col-6 back d-flex align-items-center">
+                  <a [routerLink]="[showTab==2 ? '/inquiry' : '/inquiry/details']"><img src="../../../../assets/backArrow.svg" class="mr-2" />Back</a>
+                  <p class="text m-0">The case under investigation - <span>{{ showTab==2 ? showCase : 'CM72012U6572'}}</span></p>
+                </div>
+                <div class="col-6 centerRight">
+                  <!-- <button id="focusProfile"><img src="../../../../assets/focusProfile.png" class="mr-2">Focus
+                    Profile</button> -->
+                  <button id="download"><img src="../../../../assets/downloadDetails.png" class="mr-2">Download</button>
+                  <button id="print"><img src="../../../../assets/print.png" class="mr-2">Print</button>
+                  <div class="dropdown ml-15">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Insight Details
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" [routerLink]="'/inquiry/details'" [style]="showTab==2 ? 'display: none' : 'display: block'">Basic Details</a>
+                      <a class="dropdown-item active" [routerLink]="['/inquiry/details/insight-details', 'tab: '+ showTab]" [style]="showTab==2 ? 'min-width: 160px' : ' '">Insight Details</a>
+                      <a *ngIf="showTab!=2; else hideCounter" class="dropdown-item" [routerLink]="['/inquiry/counter-party-details']">Counter Party Details</a>
+                      <ng-template #hideCounter>
+                        <a class="dropdown-item" [routerLink]="['/inquiry/counter-party-details', {case: showCase}]">Counter Party Details</a>
+                      </ng-template>
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+         <div class="card-details">
+            <div class="heading d-flex">
+               <img class="icon-img" src="../../../../assets/bubble.png" />
+               <p class="ml-2">Entity Centric</p>
+            </div>
+            <div class="card primary-card info mt-2 pb-0 tabs-view">
+               <mat-tab-group [selectedIndex]="showTab?0:1">
+                  <mat-tab [disabled]='showTab==1?false:true'>
+                    <ng-template mat-tab-label>
+                      <img class="mr-2" src="../../../../assets/esclated.svg" />
+                      Escalated
+                    </ng-template>
+                    <div class="card-body p-0">
+                      <table class="table">
+                         <thead>
+                            <tr>
+                               <th scope="col">Case No</th>
+                               <th scope="col">Alert Scnerio</th>
+                               <th scope="col">Status</th>
+                               <th scope="col">Description</th>
+                               <th scope="col">Total Amount</th>
+                               <th scope="col">Case Date</th>
+                               <th scope="col">Disp Date</th>
+                               <th scope="col">Analyst</th>
+                               <th scope="col">Role</th>
+                               <th scope="col">Relation</th>
+                               <th scope="col">Comments</th>
+                            </tr>
+                         </thead>
+                          <tbody>
+                            <tr *ngFor="let data of getInsightDerogatoryTransaction | slice:0:3;">
+                               <td>{{ data.caseNo }}</td>
+                               <td>{{ data.alertScnerio }}</td>
+                               <td>
+                                  <span class=" round-cube ">
+                                     {{ data.status }}
+                                  </span>
+                               </td>
+                               <td>{{ data.description }}</td>
+                               <td>{{ data.totalAmount }}</td>
+                               <td>{{ data.caseDate }}</td>
+                               <td>{{ data.caseDispDate }}</td>
+                               <td>{{ data.analyst }}</td>
+                               <td>{{ data.role }}</td>
+                               <td>{{ data.relation }}</td>
+                               <td class="w-30" style="width: 58rem;">{{ data.comments }}</td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                  </mat-tab>
+                  <mat-tab [disabled]='showTab==1?false:true'>
+                    <ng-template mat-tab-label>
+                      <img class="mr-2" src="../../../../assets/not-esclated.svg" />
+                      Non Escalated
+                    </ng-template>
+                    <div class="card-body p-0">
+                      <table class="table">
+                         <thead>
+                            <tr>
+                               <th scope="col">Case No</th>
+                               <th scope="col">Alert Scnerio</th>
+                               <th scope="col">Status</th>
+                               <th scope="col">Description</th>
+                               <th scope="col">Total Amount</th>
+                               <th scope="col">Case Date</th>
+                               <th scope="col">Analyst</th>
+                               <th scope="col">Role</th>
+                               <th scope="col">Relation</th>
+                               <th scope="col">Comments</th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <tr *ngFor="let data of getInsightDetails | slice:1:getInsightDetails.length">
+                               <td>{{ data.caseNo }}</td>
+                               <td>{{ data.alertScnerio }}</td>
+                               <td>
+                                  <span class=" round-cube ">
+                                     {{ data.status }}
+                                  </span>
+                               </td>
+                               <td>{{ data.description }}</td>
+                               <td>{{ data.totalAmount }}</td>
+                               <td>{{ data.caseDate }}</td>
+                               <td>{{ data.analyst }}</td>
+                               <td>{{ data.role }}</td>
+                               <td>{{ data.relation }}</td>
+                               <td>{{ data.comments }}</td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                  </mat-tab>
+               </mat-tab-group>
+            </div>
+         </div>
+         <div class="card-details pt-4">
+            <div class="heading d-flex">
+               <img class="icon-img" src="../../../../assets/bubble.png" />
+               <p class="ml-2">Transaction Centric</p>
+            </div>
+            <div class="card primary-card info mt-2 tabs-view mb-10">
+               <mat-tab-group [selectedIndex]="getIndex()">
+                  <mat-tab [disabled]='showTab==1?false:true'>
+                    <ng-template mat-tab-label>
+                      <img class="mr-2" src="../../../../assets/false.png" />
+                      False Positive
+                    </ng-template>
+                     <div class="card-body p-0">
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th scope="col">SQL</th>
+                                 <th scope="col">GRP Key</th>
+                                 <th scope="col">Alert Scenario</th>
+                                 <th scope="col">Orig Acct No</th>
+                                 <th scope="col">Orig Cust No</th>
+                                 <th scope="col">Ben Acct No</th>
+                                 <th scope="col">Ben Cust No</th>
+                                 <th scope="col">Product Type</th>
+                                 <th scope="col">Role</th>
+                                 <th scope="col">Txns</th>
+                                 <th scope="col">In Sample</th>
+                                 <th scope="col">USD</th>
+                                 <th scope="col">Currency</th>
+                                 <th scope="col">Insight</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr *ngFor="let transactionData of getInsightTransaction">
+                                 <td>{{ transactionData.sql }}</td>
+                                 <td>{{ transactionData.grpKey }}</td>
+                                 <td>{{ transactionData.alertScenario }}</td>
+                                 <td>{{ transactionData.originatorAcctNo }}</td>
+                                 <td>{{ transactionData.originatorCustNo }}</td>
+                                 <td>{{ transactionData.beneficiaryAcctNo }}</td>
+                                 <td>{{ transactionData.beneficiaryCustNo }}</td>
+                                 <td>
+                                    <span class="round-cube">
+                                       {{ transactionData.productType }}
+                                    </span>
+                                 </td>
+                                 <td>{{ transactionData.role }}</td>
+                                 <td>{{ transactionData.numberOfTxns }}</td>
+                                 <td>{{ transactionData.inSample }}</td>
+                                 <td>{{ transactionData.usd }}</td>
+                                 <td class="orangeColor">{{ transactionData.tranCurrency }}</td>
+                                 <td>
+                                    <a style="text-decoration: none;"
+                                       [routerLink]="getLinkView(transactionData.grpKey,transactionData.alertScenario,transactionData.originatorAcctNo,transactionData.beneficiaryAcctNo,transactionData.insight)">
+                                       <span class="round-cube">{{ transactionData.insight }}</span></a>
+                                 </td>
+
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </mat-tab>
+                  <mat-tab #tab [disabled]='showTab==2?false:true'>
+                    <ng-template mat-tab-label>
+                      <img class="mr-2" src="../../../../assets/derogatory.svg" />
+                      Derogatory
+                    </ng-template>
+                     <div class="card-body p-0">
+                        <table class="table">
+                           <thead>
+                              <tr>
+                                 <th scope="col">SQL</th>
+                                 <th scope="col">GRP Key</th>
+                                 <th scope="col">Alert Scenario</th>
+                                 <th scope="col">Orig Acct No</th>
+                                 <th scope="col">Orig Cust No</th>
+                                 <th scope="col">Ben Acct No</th>
+                                 <th scope="col">Ben Cust No</th>
+                                 <th scope="col">Product Type</th>
+                                 <th scope="col">Role</th>
+                                 <th scope="col">Txns</th>
+                                 <th scope="col">In Sample</th>
+                                 <th scope="col">USD</th>
+                                 <th scope="col">Currency</th>
+                                 <th scope="col">Insight</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr *ngFor="let derogatoryData of getinsightDerogatory">
+                                 <td>{{ derogatoryData.sql }}</td>
+                                 <td>{{ derogatoryData.grpKey }}</td>
+                                 <td>{{ derogatoryData.alertScenario }}</td>
+                                 <td>{{ derogatoryData.originatorAcctNo }}</td>
+                                 <td>{{ derogatoryData.originatorCustNo }}</td>
+                                 <td>{{ derogatoryData.beneficiaryAcctNo }}</td>
+                                 <td>{{ derogatoryData.beneficiaryCustNo }}</td>
+                                 <td>
+                                    <span class="round-cube">
+                                       {{ derogatoryData.productType }}
+                                    </span>
+                                 </td>
+                                 <td>{{ derogatoryData.role }}</td>
+                                 <td>{{ derogatoryData.numberOfTxns }}</td>
+                                 <td>{{ derogatoryData.inSample }}</td>
+                                 <td>{{ derogatoryData.usd }}</td>
+                                 <td class="orangeColor">{{ derogatoryData.tranCurrency }}</td>
+                                 <td>
+                                    <a class="round-cube color-text"
+                                       [routerLink]="getLinkView(derogatoryData.grpKey, derogatoryData.alertScenario,derogatoryData.originatorAcctNo,derogatoryData.beneficiaryAcctNo,derogatoryData.insight)">
+                                       {{ derogatoryData.insight }}
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </mat-tab>
+                  <mat-tab  [disabled]='showTab==3?false:true'>
+                    <ng-template mat-tab-label>
+                      <img class="mr-2" src="../../../../assets/all.svg" />
+                      All
+                    </ng-template>
+                  </mat-tab>
+               </mat-tab-group>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>

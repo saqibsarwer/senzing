@@ -1,0 +1,36 @@
+[
+    {
+        "sql": "#1",
+        "grpKey":"RETAIL|CUST|39328861|234345|WIRE|O->B|CUST|0099834756",
+        "alertScenario": "RMF",
+        "originatorAcctNo":"939998077",
+		"originatorCustNo": "39328861",
+        "beneficiaryAcctNo": "18649998",
+		"beneficiaryCustNo": "0099834756",
+        "productType": "Wire",
+        "numberOfTxns": 1,
+        "inSample": "Y",
+        "usd": "$1,258,086.98",
+        "localCurrency": "AUD",
+        "role": "Focus",
+        "tranCurrency": "USD",
+        "insight": "Nexus Detected With RMF"
+    },
+    {
+        "sql": "#2",
+        "grpKey":"RETAIL|CUST|39328861|234345|WIRE|O->B|CUST|0099342499",
+        "alertScenario": "RMF",
+        "originatorAcctNo":"429199908",
+		"originatorCustNo": "39328861",
+        "beneficiaryAcctNo": "009838377",
+		"beneficiaryCustNo": "0099342499",
+        "productType": "Wire",
+        "numberOfTxns": 5,
+        "inSample": "Y",
+        "usd": "$878,000",
+        "localCurrency": "AUD",
+		"role": "Focus",
+		"tranCurrency": "USD",
+        "insight": "Approved Previously but Demoted"
+    }
+]

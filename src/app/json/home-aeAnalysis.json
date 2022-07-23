@@ -1,0 +1,52 @@
+[
+    {
+        "month": "Feb - 2022",
+        "country":"AU",
+        "desk":"Bangalore",
+        "totalCases":"300",
+        "averageTime":"50",
+        "totalTime":"1,500",
+        "timeTestedCases":"10",
+        "totalActualTime":"250",
+        "averageTimeCase":"25",
+        "timeSavingCase":"25",
+        "saved":"50%",
+        "isDesk": "warning",
+        "isActual": "success",
+		"comments": "ANT mostly detected the previously approved pairs."
+
+    },
+    {
+        "month": "Jan - 2022",
+        "country":"AU",
+        "desk":"Mumbai",
+        "totalCases":"600",
+        "averageTime":"60",
+        "totalTime":"2,000",
+        "timeTestedCases":"10",
+        "totalActualTime":"200",
+        "averageTimeCase":"20",
+        "timeSavingCase":"30",
+        "saved":"60%",
+        "isDesk": "warning",
+        "isActual": "success",
+		"comments": "ANT detected 1 nexus which analysts could not query in existing set-up."
+    }
+	,
+    {
+        "month": "Jan - 2022",
+        "country":"AU",
+        "desk":"Hydrabad",
+        "totalCases":"30",
+        "averageTime":"45",
+        "totalTime":"2,000",
+        "timeTestedCases":"5",
+        "totalActualTime":"200",
+        "averageTimeCase":"65",
+        "timeSavingCase":"-20",
+        "saved":"-66%",
+        "isDesk": "warning",
+        "isActual": "warning",
+		"comments": "ANT detected 12 pairs which were not part of the 80-20 rule, most of them got RM ENQUIRY cases in last 8 months."
+    }
+]

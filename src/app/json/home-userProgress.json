@@ -1,0 +1,67 @@
+[
+    {
+    "userName": "Preya Roy",
+    "designation": "Mumbai Hub",
+    "image": "user.png",
+    "quality": "BEST",   
+    "time": "144 cases",
+    "valueArrow": "Group 150 (1).png",
+    "valueClass": "BEST",
+    "averageTime": "40min / case",
+    "value": "  +2.5",
+    "daysLeft": "9 active cases currently",
+    "percent":97
+  },
+  {
+    "userName": "Manik Day",
+    "designation": "Bangalore Hub",
+    "image": "user2.png",
+    "quality": "AVERAGE",  
+    "time": "98 Cases",
+    "valueArrow": "Group 150 (1).png",
+    "valueClass": "AVARAGE",
+    "averageTime": "51min / case",
+    "value": "+2.5",
+    "daysLeft": "19 active cases currently",
+    "percent":70
+  },
+  {
+    "userName": "Sobuj Hasan",
+    "designation": "Bangalore Hub",
+    "image": "user3.png",
+    "quality": "AVERAGE",  
+    "time": "65 Cases",
+    "valueArrow": "Group 150 (1).png",
+    "valueClass": "AVARAGE",
+    "averageTime": "65min / case",
+    "value": "+2.5",
+    "daysLeft": "81 active cases currently",
+    "percent":70
+  },
+  {
+    "userName": "Sipra Kundu",
+    "designation": "Bangalore Hub",
+    "image": "user4.png",
+    "quality": "ATTENTION",  
+    "time": "44 Cases",
+    "valueArrow": "Group 150 (2).png",
+    "valueClass": "NOT GOOD",
+    "averageTime": "69min / case",
+    "value": "-1.5",
+    "daysLeft": "99 active cases currently",
+    "percent":47
+  },
+  {
+    "userName": "Moni Sana",
+    "designation": "Bangalore Hub",
+    "image": "user5.png",
+    "quality": "ATTENTION",  
+    "time": "12 Cases",
+    "valueArrow": "Group 150 (2).png",
+    "valueClass": "NOT GOOD",
+    "averageTime": "71min / case",
+    "value": "-1.5",
+    "daysLeft": "101 active cases currently",
+    "percent":47
+  }
+]

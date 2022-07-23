@@ -1,0 +1,99 @@
+<div class="right-content">
+    <section class="">
+        <div class="">
+            <div class="boxed-card">
+                <div class="card primary-card">
+                    <div class="card-body p-0">
+                        <!-- <form> -->
+                        <div class="row">
+                            <div class="col">
+                                <label class="mr-sm-2">Case No</label>
+                                <input type="text" class="form-control" placeholder="Write case number..." />
+                            </div>
+                            <div class="col">
+                                <label class="mr-sm-2">Line Of Business</label>
+                                <input type="text" class="form-control" placeholder="Write line of business..." />
+                            </div>
+                            <div class="col">
+                                <label class="mr-sm-2">Jurisdiction</label>
+                                <input type="text" class="form-control" placeholder="Write jurisdiction..." />
+                            </div>
+                            <div class="col">
+                                <label class="mr-sm-2">Alert Scenario</label>
+                                <input type="text" class="form-control" placeholder="Write alert Scenario..." />
+                            </div>
+                            <div class="col">
+                                <label class="mr-sm-2">Focus ID</label>
+                                <input type="text" class="form-control" placeholder="Write focus ID..." />
+                            </div>
+                            <div class="col">
+                                <label class="mr-sm-2"></label>
+                                <div class="custom-control custom-checkbox mt-2 p-0">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                    <label class="custom-control-label" for="customCheck" style="padding-left: 25px;">Open Only</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- <label class="mr-sm-2"></label> -->
+                                <button class="btn primary-btn" type="button">
+                                    <i class="bi bi-search mr-2"></i>Search
+                                </button>
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+                <div class="card primary-card mt-3">
+                    <div class="card-body p-0">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Time Spent</th>
+                                <th scope="col" class="text-center">Action</th>
+                                <th scope="col">Case Number</th>
+                                <th scope="col">Case Date</th>
+                                <th scope="col">Focus Cust ID</th>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Analyst</th>
+                                <th scope="col">Insight Summary</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let data of getHomeData; let i = index;">
+                                <!-- <th scope="row">{{ data.timeSpent }}</th> -->
+                                <td class="text-center">{{ data.timeSpent }}</td>
+                                <td><span class="badge alert-success " [ngClass]="{ 'lowRisk' : data.action == 'Low Risk', 'fullView' : data.action == 'Full View' }">{{data.action }}</span></td>
+                                <td>{{ data.caseNo }}</td>
+                                <td>{{ data.caseDate }}</td>
+                                <td>{{ data.focusCustID }}</td>
+                                <td style="white-space: nowrap;">{{ data.customerName }}</td>
+                                <td >{{ data.analyst }}</td>
+                                <td class="bulletSize" [innerHTML]="data.insightSummary"></td>
+                                <td>
+                                    <button *ngIf="i<3" type="button" class="btn btn-primary table-btn " [routerLink]="getViewLink(data.view, data.caseNo)"
+                                            [ngClass]="{ 'view1' : data.caseNo == 'CM32012U5267', 'view2' : data.caseNo == 'CM12013U4311',
+                                            'view3' : data.caseNo == 'CM102012U443' }">{{ data.view }}</button>
+                                </td>
+                                <td><img class="opacity" src="../../../assets/download.svg" /></td>
+                                
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination pt-20">
+                      <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/left.svg" /></a></li>
+                      <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                      <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/right.svg" /></a></li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+</div>

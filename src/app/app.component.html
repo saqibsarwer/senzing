@@ -1,0 +1,4 @@
+<app-header *ngIf="!hideHeaderNFooter"></app-header>
+<app-sidebar-menu *ngIf="!hideHeaderNFooter"></app-sidebar-menu>
+<router-outlet (activate)="onActivate()"></router-outlet>
+<app-footer *ngIf="!hideHeaderNFooter"></app-footer>

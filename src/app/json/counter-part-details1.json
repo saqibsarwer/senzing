@@ -1,0 +1,27 @@
+[
+  {
+    "entityType": "Private",
+    "relation": "Same Entity",
+    "accountNo": "077-897876-33",
+    "customerNo": "0008347566433",
+    "name": "The Grove Sing Sang Studios",
+    "address": "33 Heffron Lane,Spring Hills,Brisbane, 4006, Australia",
+    "type": "Transaction Party",
+    "geo": "Australia",
+    "insight": "Approved Counter-party",
+    "memo": "Total accounts transacted in last 12 Months: 11,234"
+  },
+  {
+    "entityType": "Wealth",
+    "relation": "Same Entity",
+    "accountNo": "023-001356-82",
+    "customerNo": "0992345643721",
+    "name": "WhiteOak Capital Flexi Cap Fund",
+    "address": "Level 54/111 Eagle St, Brisbane City QLD 4000",
+    "type": "Transaction Party",
+    "geo": "Australia",
+    "insight": "Proposed Counter-party",
+    "memo": "Total accounts transacted in last 12 Months: 1,043"
+  }
+
+]

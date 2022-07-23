@@ -1,0 +1,87 @@
+<kendo-card>
+  <ngx-graph
+    [links]="hierarchical.links"
+    [view]="[700, 300]"
+    [nodes]="hierarchical.nodes"
+    [draggingEnabled]="draggingEnabled"
+    [panningEnabled]="panningEnabled"
+    [enableZoom]="zoomEnabled"
+    [zoomSpeed]="zoomSpeed"
+    [minZoomLevel]="minZoomLevel"
+    [maxZoomLevel]="maxZoomLevel"
+    [panOnZoom]="panOnZoom"
+    [autoZoom]="autoZoom"
+    [autoCenter]="autoCenter"
+    [center$]="center$"
+    [zoomToFit$]="zoomToFit$"
+    [layout]="layout"
+  >
+    <!-- Defs -->
+    <ng-template #defsTemplate>
+
+
+      <svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="2" markerHeight="2" orient="auto">
+    <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+  </svg:marker>
+
+      <svg>
+        <defs>
+          <circle
+            cx="50"
+            cy="50"
+            r="50"
+            [attr.fill]="'none'"
+            stroke="lightblue"
+            stroke-width="1px"
+          />
+        </defs>
+      </svg>
+    </ng-template>
+
+    <!-- nodes -->
+    <ng-template #nodeTemplate let-node>
+      <svg:g class="node">
+        <svg
+          [attr.width]="node.dimension.width"
+          [attr.height]="node.dimension.height"
+        >
+          <image
+            x="2%"
+            y="2%"
+            width="40"
+            height="40"
+            [attr.href]="node.meta.link"
+          ></image>
+          <text x="0" y="60">{{ node.label }}</text>
+          <text x="0" y="75">{{ node.name }}</text>
+          <text x="0" y="85">{{ node.country }}</text>
+          <text x="0" y="95">{{ node.gender }}</text>
+          <text x="0" y="75">{{ node.type }}</text>
+        </svg>
+      </svg:g>
+    </ng-template>
+
+    <!-- links -->
+    <ng-template #linkTemplate let-link>
+      <svg:g class="edge">
+        <svg:path
+          class="line"
+          stroke-width="3"
+          marker-end="url(#arrow)"
+        ></svg:path>
+        <svg:text class="edge-label" text-anchor="start" x="0">
+          <textPath
+
+            class="text-path"
+            [attr.href]="'#' + link.id"
+            [style.dominant-baseline]="link.dominantBaseline"
+            startOffset="0"
+            endOffset="90%"
+          >
+            {{ link.label }}
+          </textPath>
+        </svg:text>
+      </svg:g>
+    </ng-template>
+  </ngx-graph>
+</kendo-card>

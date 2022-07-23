@@ -1,0 +1,132 @@
+.bi-cloud-arrow-down-fill::before {
+    content: "\f294";
+    color: #9f9a9a;
+    height: -10px;
+    font-size: 33px;
+    margin-top: 4px;
+  }
+
+  .bi-trash-fill::before {
+    content: "\f5dd";
+    font-size: 19px;
+    color: red;
+    margin-top: 11px;
+  }
+
+  .primary-card {
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    box-shadow: 0px 4px 12px rgb(0 25 95 / 7%);
+    border-radius: 8px;
+
+    label {
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 18px;
+      height: 18px;
+      color: rgba(35, 46, 104, 0.69);
+      // width: 100%;
+    }
+  }
+
+  input[type="checkbox"] + label {
+    color: #00195F;
+  }
+
+  button.table-btn.danger {
+    background: #FF0000;
+  }
+
+  button.table-btn.orange {
+    background: #ED7D31;
+  }
+
+  button.table-btn.yellow {
+    background: #DDCB4E;
+  }
+
+  .custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #00195F;
+    background-color: #00195F;
+    height: 18px;
+    width: 18px;
+    top: -1px;
+  }
+
+  .lowRisk {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ED9B11;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+  }
+
+  .fullView {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #3E30E9;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+  }
+
+  .badge.lowRisk {
+    background: rgba(237, 155, 17, 0.08);
+    border: 1px solid rgba(237, 155, 17, 0.35);
+    border-radius: 36px;
+    height: 24px;
+  }
+
+  .badge.fullView {
+    background: rgba(62, 48, 233, 0.08);
+    border: 1px solid rgba(62, 48, 233, 0.35);
+    border-radius: 36px;
+    height: 24px;
+  }
+
+  .view:focus {
+    background: #00A542;
+    border-color: #00A542;
+  }
+
+  .view1, .view1:focus {
+    background: #FF0000;
+    border-color: #FF0000;
+  }
+
+  .view2, .view2:focus {
+    background: #ED7D31;
+    border-color: #ED7D31;
+  }
+
+  .view3, .view3:focus {
+    background: #DDCB4E;
+    border-color: #DDCB4E;
+  }
+
+  .btn-primary:hover.view {
+    background: #00A542;
+    border-color: #00A542;
+  }
+
+  img.opacity {
+    opacity: 0.6;
+  }
+
+  tbody tr:hover img.opacity {
+    opacity: 0.8;
+  }
+
+  .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 12px 8px;
+  }
+

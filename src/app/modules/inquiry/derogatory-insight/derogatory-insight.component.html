@@ -1,0 +1,215 @@
+<div class="right-content">
+  <section class="">
+    <div class="boxed-card pb-5">
+      <div class="card primary-card mb-4 header">
+        <div class="row">
+          <div
+            class="d-flex align-items-center justify-content-between flex-row"
+          >
+            <div class="back d-flex align-items-center">
+              <a (click)="goBack()" style="cursor: pointer;">
+                <img src="../../../../assets/backArrow.png" class="mr-1" />
+                Back to insight details
+              </a>
+              <p class="text m-0">
+                Case under investigation
+                <span>3M1201U4311</span>
+              </p>
+            </div>
+            <div class="buttons-div">
+              <button id="download">
+                <img
+                  src="../../../../assets/downloadDetails.png"
+                  class="mr-2"
+                />
+                Download
+              </button>
+              <button id="print">
+                <img src="../../../../assets/print.png" class="mr-2" />
+                Print
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 responsive-column1">
+          <div class="card-details">
+            <div class="card primary-card info mt-2 pb-2">
+                <app-graph></app-graph>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------->
+        <div class="col-8 responsive-column2">
+          <div class="card-details">
+            <div class="card primary-card mt-2 pb-0">
+              <div class="card-body scroll-card p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="pt-0">Tran Id</th>
+                      <th scope="col" class="pt-0">Case No</th>
+                      <th scope="col" class="pt-0">Alert Scenario</th>
+                      <th scope="col" class="pt-0">Orig Acct</th>
+                      <th scope="col" class="pt-0">Ben Acct</th>
+                      <th scope="col" class="pt-0">Focus Type</th>
+                      <th scope="col" class="pt-0">Tran Amount</th>
+                      <th scope="col" class="pt-0">Tran Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let deogatoryData of getdeogatory">
+                      <td [ngClass]="{ 'statusGreen' : deogatoryData.tranId == '#2365s3453853' }">{{ deogatoryData.tranId }}</td>
+                      <td>
+                        {{ deogatoryData.caseNo }}
+                      </td>
+                      <td>
+                        <span class="round-cube">
+                          {{ deogatoryData.alertScenario }}
+                        </span>
+                      </td>
+                      <td>{{ deogatoryData.originatorAccts }}</td>
+                      <td>{{ deogatoryData.BenAcct }}</td>
+                      <td>{{ deogatoryData.focusType }}</td>
+                      <td>{{ deogatoryData.tranamount }}</td>
+                      <td>{{ deogatoryData.tranDate }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-left.png" />
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active">1</a></li>
+                  <li class="page-item"><a class="page-link">2</a></li>
+                  <li class="page-item"><a class="page-link">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-right.png" />
+                    </a>
+                  </li>
+                  <li class="pagintion-select">
+                    <mat-paginator
+                      [length]="10"
+                      [pageSizeOptions]="[10, 50, 100]"
+                      aria-label="Select page"
+                      disabled
+                    ></mat-paginator>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bottom-row mt-5">
+        <div class="col-4 responsive-column3">
+          <div class="card-details">
+            <div class="heading d-flex align-items-center">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Comments</p>
+            </div>
+            <div class="card primary-card mt-2 pb-0">
+              <div class="d-flex flex-row align-items-center">
+                <img class="mr-2" src="../../../../assets/Ellipse 8.png" />
+                <div class="">
+                  <p class="m-0">Narayan LK</p>
+                  <small class="">Bangalore Hub</small>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="details">
+                  This is a valid case of nexus with RMF, transaction dates
+                  follow patten detection criteria. As there are 2 embassies
+                  involved Daniel sir has asked to include all the search
+                  screenshots for the adverse news check. We have attached attached our report from Smart-Cognitive KYC report.
+                  The current criteria is top 20 reports, as this is a very gunuine case, we have checked 50 news articles from lexusnexus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 responsive-column4">
+          <div class="card-details">
+            <div class="heading d-flex align-items-center">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Your Impression</p>
+            </div>
+
+            <div class="card primary-card info mt-2">
+              <div class="card-body p-0">
+                <p>Please give your research feedback here!</p>
+
+                <div
+                  style="
+                    background-color: #19ae43;
+                    text-align: center;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    margin-bottom: 10px;
+                  "
+                >
+                  <img src="../../../../assets/vTransaction.png" alt="" class="mr-2">
+                 Valid Transection
+                </div>
+
+                <div
+                  style="
+                    background-color: #ff0000;
+                    text-align: center;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                  "
+                >
+                  <img src="../../../../assets/iTransaction.png" alt="" class="mr-2">
+                  Invalid Transection
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 responsive-column5">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Notes</p>
+            </div>
+            <div class="card primary-card mt-2 pb-0">
+              <div class="form-group">
+                <label for="exampleTextarea" class="mb-2">
+                  Type your notes
+                </label>
+                <textarea class="form-control" id="exampleTextarea" rows="3">
+Compliance approval is needed to confirm this case as a hidden nexus, in case they agree we need to perform more negative media review for all the involved entities.</textarea
+                >
+                <img src="../../../../assets/paperclip.png" alt="" />
+                <button class="focusProfile">Submit Files</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

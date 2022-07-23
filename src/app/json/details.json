@@ -1,0 +1,29 @@
+[
+    {
+        "entityType": "Saving",
+		"CustomerNo":"   39424982",
+		"accountNo": "122-443424-99",
+        "name": "Beth Castangia",
+        "address": "2/10 Zircon circuit, Rosedale, QLD, 4674",
+        "openDate": "28-Jan-2017"
+
+    },
+    {
+        "entityType": "Current",
+		"CustomerNo":"   39424982",
+        "accountNo": "122-646354-56",
+        "name": "Beth Castangia",
+        "address": "Unit 2/10 Zircon circuit, Rosedale, QLD, 4674",
+        "openDate": "01-May-2016"
+
+    },
+    {
+        "entityType": "TD",
+		"CustomerNo":"   39424982",
+        "accountNo": "077-100323-01",
+        "name": "Beth Castangia",
+        "address": "63 40 Ramsgate Street, Kelvin Grove, QLD, 4059",
+        "openDate": "18-Oct-2019"
+
+    }
+]

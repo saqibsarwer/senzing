@@ -1,0 +1,225 @@
+<div class="right-content">
+  <section>
+    <div class="boxed-card">
+      <div class="card primary-card mb-4 header"  [ngClass]="showCase ? 'redInfoBox' : 'greenInfoBox'">
+        <div class="row">
+          <div class="center infoButton col-11" [ngClass]="showCase ? 'redStatus' : 'greenStatus'">
+            <img class="mr-2" [src]="showCase ? '../../../../assets/info-red.svg' : '../../../../assets/info.png'" /> The current group key behavior is materially similar to its past closed and clear appearances
+          </div>
+          <div class="col-1 text-right">
+            <img class="ml-2" src="../../../../assets/close.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="card primary-card mb-4 header">
+        <div class="row">
+          <div class="d-flex align-items-center justify-content-between flex-row">
+            <div class="back d-flex">
+              <a [routerLink]="getBackLink()"><img src="../../../../assets/backArrow.png"
+                  class="mr-3"  style="cursor: pointer;"/>Back to IQR details</a>
+              <p class="text m-0">Focus Acct : <span>{{ showTab==2 ? oAcctNo : '122-443424-99'}}</span>
+                Counter-party Acct : <span>{{ showTab==2 ? bAcctNo : '077-897876-33'}}</span> Alert : {{ showTab==2 ? alert : 'CIB PPA (AC)'}} Tran Type : WIRE Direction : O Operation Hub : Bangalore</p>
+
+              </div>
+            <div class="">
+              <!-- <button id="focusProfile"><img class="mr-2" src="../../../../assets/focusProfile.png" />Focus
+                Profile</button> -->
+              <button id="download"><img class="mr-2" src="../../../../assets/downloadDetails.png" />Download</button>
+              <button id="print"><img class="mr-2" src="../../../../assets/print.png" />Print</button>
+            </div>
+            <!-- <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Basic Details
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Basic Details</a>
+                        <a class="dropdown-item" href="#" [routerLink]="'/inquiry/details/insight-details'">Insight
+                           Details</a>
+                        <a class="dropdown-item" href="#">Focus Risk</a>
+                        <a class="dropdown-item" href="#">Counter Party Details</a>
+                     </div>
+                  </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="row pt-10">
+        <div class="col-4 responsive-column1">
+          <div class="heading d-flex">
+            <img class="icon-img" src="../../../../assets/bubble.png" />
+            <p class="textHeading ml-2">Characterization Detail</p>
+          </div>
+        </div>
+        <div class="col-5 responsive-column1">
+          <div class="heading d-flex" *ngIf="showCase; else oldCase">
+
+            <!-- <small class="text-muted">The total amount is $78,927 with No rounding, Adjusted </small> -->
+          </div>
+
+          <ng-template #oldCase>
+            <div class="heading d-flex">
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="col-3 responsive-column1">
+          <div class="heading d-flex">
+            <p style="white-space: nowrap;" class="col-4 ">
+              <!-- <a [routerLink]="getLinkView()">View Details</a> -->
+            </p>
+            <select class="form-select form-select-sm col-8 flex-row-reverse mb-2" aria-label=".form-select-sm example">
+              <option selected>{{ showTab==2 ? grpKey : 'RETAIL|CUST|39424982|7236454|WIRE|O->B|XA|0008347566433' }}</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="col-4 responsive-column1">
+          <div class="card primary-card info mt-2">
+            <p class="top-heading">Cases</p>
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Case No</th>
+                    <th scope="col">Alerts</th>
+                    <th scope="col">In Sample</th>
+                    <th scope="col">Case Date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody *ngIf="showCase; else showCaseView">
+                  <tr *ngFor="let testData of getinsightTestView" >
+                    <td>{{ testData.caseNo }}</td>
+                    <td>{{ testData.scenario }}</td>
+                    <td>{{ testData.counterGeoRik }}</td>
+                    <td>{{ testData.date }}</td>
+                    <td><span class="numSpan">{{ testData.status }}</span></td>
+                  </tr>
+                </tbody>
+                <ng-template #showCaseView>
+                  <tbody>
+                    <tr *ngFor="let testData of getinsightTest" >
+                      <td>{{ testData.caseNo }}</td>
+                      <td>{{ testData.scenario }}</td>
+                      <td>{{ testData.counterGeoRik }}</td>
+                      <td>{{ testData.date }}</td>
+                      <td class="greenColor" style="white-space: nowrap;"><span class="numSpan">{{ testData.status }}</span></td>
+                    </tr>
+                  </tbody>
+                </ng-template>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 responsive-column1">
+          <div class="card primary-card info mt-2">
+            <p class="top-heading">Transaction Details</p>
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Tot Amt</th>
+                    <th scope="col">Min Txn Amt</th>
+                    <th scope="col">Max Txn Amt</th>
+                    <th scope="col" >Total Txns</th>
+                    <th scope="col" >%Credit Txn</th>
+                </thead>
+                <tbody *ngIf="showCase; else showCaseView1">
+                  <tr *ngFor="let testData of getinsightTestView">
+                    <td>{{ testData.totalAmount }}</td>
+                    <td>{{ testData.MinTxnAmt }}</td>
+                    <td>{{ testData.MaxTxnAmt }}</td>
+                    <td>{{ testData.noTransaction }}</td>
+                    <td>{{ testData.CrTxn }}</td>
+                  </tr>
+                </tbody>
+                <ng-template #showCaseView1>
+                  <tbody>
+                    <tr *ngFor="let testData of getinsightTest">
+                      <td>{{ testData.totalAmount }}</td>
+                      <td>{{ testData.MinTxnAmt }}</td>
+                      <td>{{ testData.MaxTxnAmt }}</td>
+                      <td>{{ testData.noTransaction }}</td>
+                      <td>{{ testData.CrTxn }}</td>
+                    </tr>
+                  </tbody>
+                </ng-template>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 responsive-column1">
+          <div class="card primary-card info mt-2">
+            <p class="top-heading">Rounding Details</p>
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Currency</th>
+                    <th scope="col" >% Rnd Txn</th>
+                    <th scope="col" >% Non-Rnd Txn</th>
+                    <th scope="col" >Rnd Txn_1</th>
+                    <th scope="col" >Rnd Txn_4</th>
+                    <th scope="col" >Rnd Txn_99</th>
+                  </tr>
+                </thead>
+                <tbody *ngIf="showCase; else showCaseView2">
+                  <tr *ngFor="let changeTestData of getinsightTestChangeView">
+                    <td>{{ changeTestData.currency }}</td>
+                    <td>{{ changeTestData.rndTxn }}</td>
+                    <td>{{ changeTestData.nonRndTxn }}</td>
+                    <td>{{ changeTestData.rndTxn_1 }}</td>
+                    <td>{{ changeTestData.rndTxn_4 }}</td>
+                    <td>{{ changeTestData.rndTxn_99 }}</td>
+                  </tr>
+                </tbody>
+                <ng-template #showCaseView2>
+                  <tbody>
+                    <tr *ngFor="let changeTestData of getinsightTestChange">
+                      <td>{{ changeTestData.currency }}</td>
+                      <td>{{ changeTestData.rndTxn }}</td>
+                      <td>{{ changeTestData.nonRndTxn }}</td>
+                      <td>{{ changeTestData.rndTxn_1 }}</td>
+                      <td>{{ changeTestData.rndTxn_4 }}</td>
+                      <td>{{ changeTestData.rndTxn_99 }}</td>
+                    </tr>
+                  </tbody>
+                </ng-template>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-3 responsive-column1">
+          <div class="card primary-card info mt-2">
+            <p class="top-heading">Eligibility For Materially similar test</p>
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="headingWidth">Tested transection</th>
+                    <th scope="col" class="headingWidth">Similar Character</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let insightMaterialy of getinsightMaterialy">
+                    <td>{{ insightMaterialy.testedTransaction }}</td>
+                    <td>{{ insightMaterialy.similarCharacter }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination pt-20">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/left.svg" /></a></li>
+            <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/right.svg" /></a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+</div>

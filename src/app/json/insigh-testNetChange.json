@@ -1,0 +1,42 @@
+[
+    {
+        "currency": "AUD,USD",
+        "rndTxn": "1",
+        "nonRndTxn": "80",
+        "rndTxn_1": "2",
+        "rndTxn_4": "0",
+        "rndTxn_99": "0"
+    },
+    {
+       "currency": "AUD,USD",
+        "rndTxn": "2",
+        "nonRndTxn": "79",
+        "rndTxn_1": "2",
+        "rndTxn_4": "0",
+        "rndTxn_99": "0"
+    },
+    {
+       "currency": "AUD,USD",
+        "rndTxn": "1",
+        "nonRndTxn": "90",
+        "rndTxn_1": "1",
+        "rndTxn_4": "0",
+        "rndTxn_99": "0"
+    },
+    {
+       "currency": "AUD,USD",
+        "rndTxn": "3",
+        "nonRndTxn": "95",
+        "rndTxn_1": "1",
+        "rndTxn_4": "4",
+        "rndTxn_99": "0"
+    },
+    {
+        "currency": "AUD,USD",
+        "rndTxn": "3",
+        "nonRndTxn": "79",
+        "rndTxn_1": "2",
+        "rndTxn_4": "2",
+        "rndTxn_99": "0"
+    }
+]

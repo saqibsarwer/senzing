@@ -1,0 +1,533 @@
+<div class="right-content">
+  <section class="">
+    <div class="boxed-card pb-5">
+      <div class="card primary-card mb-4 header">
+        <div class="row">
+          <div class="d-flex">
+            <div class="col-6 back d-flex align-items-center">
+              <a [routerLink]="'/inquiry'"><img src="../../../../assets/backArrow.svg" class="mr-2" />Back</a>
+              <p class="text m-0">The case under investigation - <span>CM72012U6572</span></p>
+            </div>
+            <div class="col-6 centerRight">
+              <!-- <button id="focusProfile"><img src="../../../../assets/focusProfile.png" class="mr-2">Focus
+                Profile</button> -->
+              <button id="download"><img src="../../../../assets/downloadDetails.png" class="mr-2">Download</button>
+              <button id="print"><img src="../../../../assets/print.png" class="mr-2">Print</button>
+              <div class="dropdown ml-15">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Basic Details
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" [routerLink]="'/inquiry/details'" routerLinkActive="active">Basic Details</a>
+                  <a class="dropdown-item" [routerLink]="'/inquiry/details/insight-details'">Insight Details</a>
+                  <a class="dropdown-item" [routerLink]="'/inquiry/inquiry-focus'" style="display: none;">Focus Risk</a>
+                  <a class="dropdown-item" [routerLink]="'/inquiry/counter-party-details'">Counter Party Details</a>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 responsive-column1">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Case</p>
+            </div>
+            <div class="card primary-card info mt-2 pb-3">
+              <div class="row">
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/caseNo.png" alt="" />
+                  <div class="">
+                    <h5 class="">CASE NO</h5>
+                    <p>CM72012U6572</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/caseStaus.png" alt="" />
+                  <div class="">
+                    <h5 class="">CASE STATUS</h5>
+                    <p>ASSIGNED TO LEVEL 1</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/caseDes.png" alt="" />
+                  <div class="">
+                    <h5 class="">CASE DISPOSITION</h5>
+                    <p>SUBMITTED TO OPS</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/desDate.png" alt="" />
+                  <div class="">
+                    <h5 class="">DISPOSITION DATE</h5>
+                    <p>N/A</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/analyst.png" alt="" />
+                  <div class="">
+                    <h5 class="">ANALYST</h5>
+                    <p>TK458100, NH834212</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/caseDate.png" alt="" />
+                  <div class="">
+                    <h5 class="">CASE DATE</h5>
+                    <p>01 MAR 2022</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/casAlert.png" alt="" />
+                  <div class="">
+                    <h5 class="">ALERTS</h5>
+                    <p>CIB, FTN</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/jurdiction.png" alt="" />
+                  <div class="">
+                    <h5 class="">JURISDICTION</h5>
+                    <p>91QLD</p>
+                  </div>
+                </div>
+                <div class="col-data d-flex">
+                  <img class="icon-img" src="../../../../assets/lofb.png" alt="" />
+                  <div class="">
+                    <h5 class="">LINE OF BUSINESS</h5>
+                    <p>GCG</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------->
+        <div class="col-6 responsive-column2">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Focus</p>
+            </div>
+            <div class="card primary-card mt-2 pb-0">
+              <div class="card-body p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr style="border-bottom: 2px solid #E7E9F2;">
+                      <th scope="col" class="pt-0">Entity Type</th>
+                      <th scope="col" class="pt-0">Account No</th>
+                      <th scope="col" class="pt-0">Customer No</th>
+                      <th scope="col" class="pt-0">Name</th>
+                      <th scope="col" class="pt-0">Address</th>
+                      <th scope="col" class="pt-0">Open Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of getDetailsData">
+                      <td>
+                        <span class="badge alert-success round-cube green" [ngClass]="{ 'status2' : data.entityType == 'Saving', 'status1' : ((data.entityType == 'Current') || (data.entityType == 'TD')) }">{{
+                          data.entityType
+                          }}</span>
+                      </td>
+                      <td class="pr-0">{{ data.accountNo }}</td>
+                      <td class="pr-0">{{ data.CustomerNo }}</td>
+                      <td class="pr-0">{{ data.name }}</td>
+                      <td class="pr-0">{{ data.address }}</td>
+                      <td class="pr-0">{{ data.openDate }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/left.svg" /></a></li>
+                    <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/right.svg" /></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------row----->
+      <div class="row pt-4 pb-4 second-row">
+        <div class="col-3 responsive-column3">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Insights</p>
+            </div>
+            <div class="card primary-card mt-2 pb-0" >
+              <div class="row pb-10">
+                <div class="col d-flex pl-0">
+                  <img src="../../../../assets/tested_recently.png" height="45" alt="" />
+                  <p>Previously Approved</p>
+                </div>
+                <div class="col d-flex pl-0">
+                  <img src="../../../../assets/multi_tran.png" height="45" alt="" />
+                  <p>Multiple Txns</p>
+                </div>
+              </div>
+              <div class="row pb-10">
+                <div class="col d-flex pl-0">
+                  <img src="../../../../assets/tested_recently.png" height="45" alt="" />
+                  <p>Approved Counerparty</p>
+                </div>
+                <div class="col d-flex pl-0">
+                  <img src="../../../../assets/multi_tran.png" height="45" alt="" />
+                  <p>Bottom 10th Percentile</p>
+                </div>
+              </div>
+              <div class="row pb-10">
+                <div class="col d-flex pl-0">
+                  <img src="../../../../assets/multi_tran.png" height="45" alt="" />
+                  <p>Similar Transactions</p>
+                </div>
+              </div>
+              
+              <nav aria-label="Page navigation example">
+                <ul class="pagination pt-20">
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/left.svg" /></a></li>
+                    <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/right.svg" /></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 responsive-column4">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">KYC</p>
+            </div>
+            <div class="card primary-card kyc-card mt-2 pb-0">
+              <!-- <mat-tab-group>
+                <mat-tab label="General Info">
+                  <div class="all-cards">
+                    <div class="card ">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/ginfo13.png" alt="" />
+                        <div class="d-flex flex-column">
+                          <p>13</p>
+                          <small class="">Number of Accounts</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/none.png" alt="" />
+                        <div class="d-flex flex-column">
+                          <p>None</p>
+                          <small class="">Related Companies</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/viewD.png" alt="" />
+                        <div class="d-flex flex-column">
+                          <p class="view-details">View details</p>
+                          <small class="">Number of Business</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/viewdet.png" alt="" />
+                        <div class="d-flex flex-column">
+                          <p class="view-details">View details</p>
+                          <small class="">Transection Profile</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/viewdeta.png" alt="" />
+                        <div class="d-flex flex-column">
+                          <p class="view-details">View details</p>
+                          <small class="">Purpose of Business</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Risk Management">
+                  <div class="all-cards">
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/aml.png" alt="" />
+                        <div class="d-flex flex-column">
+                        <p class="">1</p>
+                        <small class="text-muted">AML Risk</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/ofac.png" alt="" />
+                        <div class="d-flex flex-column">
+                        <p class="">2</p>
+                        <small class="text-muted">OFAC Risk</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/geo.png" alt="" />
+                        <div class="d-flex flex-column">
+                        <p class="">5</p>
+                        <small class="text-muted">GEO Risk</small>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex">
+                        <img class="mr-3" src="../../../../assets/acRisk.png" alt="" />
+                        <div class="d-flex flex-column">
+                        <p class="">1</p>
+                        <small class="text-muted">Activity Risk</small>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="d-flex align-items-center">
+                        <img class="mr-3" src="../../../../assets/domRisk.png" alt="" />
+                        <div class="d-flex flex-column">
+                          <p class="">1</p>
+                          <small class="text-muted">Domicile Risk</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+              </mat-tab-group> -->
+              <ul class="nav nav-tabs navTabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab"><img class="mr-3" src="../../../../assets/xclamation.svg" >General Info</a>
+                </li>
+                <li role="presentation"><a href="#contact" role="tab" data-toggle="tab"><img class="mr-3" src="../../../../assets/risk-management.svg" >Risk Management</a>
+                </li>
+              </ul>
+              <div class="container-fluid p-0">
+                <div class="tab-content">
+                  <div id="home" role="tabpanel" class="tab-pane active">
+                    <div class="alert alert-info">
+                      <div class="all-cards">
+                        <div class="card ">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/ginfo13.png" alt="" />
+                            <div class="d-flex flex-column">
+                              <p>4</p>
+                              <small class="">Number of Accounts</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/none.png" alt="" />
+                            <div class="d-flex flex-column">
+                              <p>None</p>
+                              <small class="">Related Companies</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/viewD.png" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="view-details">June 2022</p>
+                              <small class="">KYC last Submitted</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/viewdet.png" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="view-details">View details</p>
+                              <small class="">Transection Profile</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/viewdeta.png" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="view-details">View details</p>
+                              <small class="">Purpose of Business</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="contact" role="tabpanel" class="tab-pane fade">
+                    <div class="alert alert-info">
+                      <div class="all-cards">
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/aml.png" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="">1</p>
+                              <small class="text-muted">AML Risk</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/ofac.png" height="45" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="">2</p>
+                              <small class="text-muted">OFAC Risk</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/geo.png" height="45" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="">5</p>
+                              <small class="text-muted">GEO Risk</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/acRisk.png" height="45" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="">1</p>
+                              <small class="text-muted">Activity Risk</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="d-flex">
+                            <img class="mr-3" src="../../../../assets/domRisk.png" height="45" alt="" />
+                            <div class="d-flex flex-column">
+                              <p class="">1</p>
+                              <small class="text-muted">Domicile Risk</small>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 responsive-column5">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" alt="" />
+              <p class="ml-2">Asign To</p>
+            </div>
+            <div class="card assign-to primary-card mt-2">
+              <div class="col-data d-flex justify-content-between">
+                <div class="d-flex">
+                  <img src="../../../../assets/user.png" class="mr-3" />
+                  <div class="d-flex flex-column">
+                    <p class="m-0">Priya Roy</p>
+                    <small class="text-muted">Mumbai Hub</small>
+                  </div>
+                </div>
+                <div class="custom-control custom-checkbox center">
+                  <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                  <label class="custom-control-label" for="customCheck"></label>
+                </div>
+              </div>
+              <div class="col-data d-flex justify-content-between">
+                <div class="d-flex">
+                  <img src="../../../../assets/user2.png" class="mr-3" />
+                  <div class="d-flex flex-column">
+                    <p class="m-0">Manik Day</p>
+                    <small class="text-muted">Bangalore Hub</small>
+                  </div>
+                </div>
+                <div class="custom-control custom-checkbox center">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+                  <label class="custom-control-label" for="customCheck1"></label>
+                </div>
+              </div>
+              <div class="col-data d-flex justify-content-between">
+                <div class="d-flex">
+                  <img src="../../../../assets/user3.png" class="mr-3" />
+                  <div class="d-flex flex-column">
+                    <p class="m-0">Sobuj Hasan</p>
+                    <small class="text-muted">Bangalore Hub</small>
+                  </div>
+                </div>
+                <div class="custom-control custom-checkbox center">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2" name="example1">
+                  <label class="custom-control-label" for="customCheck2"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 responsive-column6">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Notes</p>
+            </div>
+            <div class="card primary-card mt-2 pb-0">
+              <div class="form-group">
+                <label for="exampleTextarea" class="mb-2">Type your notes</label>
+                <textarea class="form-control" id="exampleTextarea"
+                  rows="3">Fine with analysts's comments and will submit for Comp's closure. @Jemmy plz see what is holding us to auto close this pair.</textarea>
+                <img src="../../../../assets/paperclip.png" alt="">
+                <button class="focusProfile">Submit Files</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 responsive-column7">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Comments</p>
+            </div>
+            <div class="card primary-card mt-2 pb-0">
+              <div class="d-flex flex-row align-items-center">
+                <img class="mr-2" src="../../../../assets/user.png" />
+                <div class="">
+                  <p class="m-0">Priya Roy</p>
+                  <small class="">Mumbai Hub</small>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="details"> Manually validated the IQR range. Checked the characterization of the pairs, current case
+                  amount did not cross the threshold shared by the Sydney Compliance (Thresholds received from Peter's Optimization
+                  team). </p>
+              </div>
+              <div class="d-flex flex-row align-items-center">
+                <img class="mr-2" src="../../../../assets/user2.png" />
+                <div class="">
+                  <p class="m-0">Manik Day</p>
+                  <small class="">Bangalore Hub</small>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="details"> Focus and counterparties have been investigated, one pair is part of the waiting list of proposed autoclosed pair list. We will bring the point in next OPS monthly status call with Jemmy Madam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------boxed----->
+  </section>
+</div>

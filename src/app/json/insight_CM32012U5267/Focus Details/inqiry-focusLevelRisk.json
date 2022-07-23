@@ -1,0 +1,30 @@
+[
+    {
+        "risk": "Is Watch Listed",
+        "details": "Kusha T. Marsha / OFAC",
+        "date": "13 Nov 10",
+		"updated": "13 Nov 21",
+        "new": ""
+    },
+    {
+        "risk": "Customer Is In Mid-Risk GEO",
+        "details": "MY / Mid Risk (7)",
+        "date": "15 Feb 18",
+		"updated": "13 Nov 21",
+        "new": ""
+    },
+    {
+        "risk": "Customer Has Elevated Risk",
+        "details": "HIGH",
+        "date": "31 Dec 21",
+		"updated": "01 Jan 22",
+        "new": "New"
+    },
+    {
+        "risk": "Customer Previously Escalated",
+        "details": "CM45672U8833 / Escalated",
+        "date": "06 Mar 01",
+		"updated": "01 Apr 02",
+        "new": ""
+    }
+]

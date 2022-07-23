@@ -1,0 +1,23 @@
+[
+    {
+        "testedTransaction": "Yes",
+        "similarCharacter": "Yes"
+    },
+    {
+        "testedTransaction": "Yes",
+        "similarCharacter": "Yes"
+    },
+    {
+        "testedTransaction": "Yes",
+        "similarCharacter": "Yes"
+    },
+    {
+        "testedTransaction": "Yes",
+        "similarCharacter": "Yes"
+    },
+    {
+        "testedTransaction": "No",
+        "similarCharacter": "No"
+    }
+
+]

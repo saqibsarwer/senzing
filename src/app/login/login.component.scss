@@ -1,0 +1,82 @@
+.mainLoginBox {
+  background: #F0F4F8;
+  border-radius: 15px;
+}
+
+.mainLoginHeading {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #00195F;
+}
+
+.loginForm {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 19px rgba(101, 115, 156, 0.15);
+  border-radius: 15px;
+}
+.bigger { font-size:200%; }
+
+// input[type=text]:focus {
+//   width: 180px;
+//   height: 60px;
+//   background-color: #FF6600 !important;
+//   border-radius: 10px;
+//   border: 1px solid #FF6600;
+// }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.loginFormPassField {
+  width: 180px;
+  height: 60px;
+  border: 2px solid #E1E3F0;
+  border-radius: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: center;
+  color: rgba(0, 25, 95, 0.5) !important;
+}
+
+input[type=text], input[type=password]::placeholder {
+  color: rgba(0, 25, 95, 0.5) !important;
+}
+
+
+
+.loginFormInputFieldText {
+  width: 180px;
+  height: 60px;
+  background-color: #FF6600 !important;
+  border-radius: 10px;
+  border: 1px solid #FF6600;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: center;
+  color: #000 !important;
+}
+
+form .alert-danger {
+  width: 180px;
+}
+
+em {  /* or .call em, but you should aim for consistency in your styling */
+  font-style: normal;
+  font-size: 200%;
+  text-transform: uppercase;
+}

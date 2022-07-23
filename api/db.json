@@ -1,0 +1,475 @@
+{
+    "home":[
+        {
+          "timeSpent": 45,
+          "action": "Low Risk",
+          "caseNo": "CM72012U6572",
+          "caseDate": "01/03/2022",
+          "focusCustID": 4032206307,
+          "customerName": "Beth Castangia",
+          "analyst": "TK458100 NH834212",
+          "insightSummary": "Pair was cleared with similar amount in last 12 months, no material change behaviour, 1 approved popular counter-party, 1 transaction is pending with other analyst of Bangalore Hub",
+          "view": "View"
+        },
+        {
+          "timeSpent": 17,
+          "action": "Full View",
+          "caseNo": "CM32012U5267",
+          "caseDate": "12/9/2021",
+          "focusCustID": 1560719992,
+          "customerName": "Kusha Mary",
+          "analyst": "TK8334253",
+          "insightSummary": "Focus closely related to entity which was part of an escalated case, effective risk of the focus has increased",
+          "view": "View1"
+        },
+        {
+          "timeSpent": 31,
+          "action": "Full View",
+          "caseNo": "CM12013U4311",
+          "caseDate": "11/10/2021",
+          "focusCustID": 4712522413,
+          "customerName": "Lucilia Prescott",
+          "analyst": "TK8334253",
+          "insightSummary": "Back-To-Back RMF recorded, previously untested pairs showing significant change in behavior, bottom percentile counterparty is part of sanction list (country code RU)",
+          "view": "View2"
+        },
+        {
+          "timeSpent": 80,
+          "action": "Low Risk",
+          "caseNo": "CM102012U443",
+          "caseDate": "10/26/2021",
+          "focusCustID": 214520941,
+          "customerName": "Lucilia Prescott",
+          "analyst": "TK8334253",
+          "insightSummary": "Previous REQSAR’ed counteparty, similar amounts in 6 day window, new product type",
+          "view": "View3"
+        },
+        {
+          "timeSpent": 10,
+          "action": "Low Risk",
+          "caseNo": "CM82013U1925",
+          "caseDate": "10/22/2021",
+          "focusCustID": 176228246,
+          "customerName": "Roxanne Casbourne",
+          "analyst": "TK8032764",
+          "insightSummary": "Previously cleared and no material changes",
+          "view": "View"
+        },
+        {
+          "timeSpent": 23,
+          "action": "Low Risk",
+          "caseNo": "CM82012U9615",
+          "caseDate": "10/15/2021",
+          "focusCustID": 936980034,
+          "customerName": "Quincey Schoolcroft",
+          "analyst": "TK8334253",
+          "insightSummary": "Previously tested in the last 6 month and no material change in behavior",
+          "view": "View"
+        }
+      ],
+      "details":[
+        {
+            "entityType": "Saving",
+            "accountNo": "0122-4434234",
+            "name": "Beth Castangia",
+            "address": "2/10 Zircon circuit, Rosedale, QLD, 4674",
+            "openDate": "01/28/17"
+    
+        },
+        {
+            "entityType": "Current",
+            "accountNo": "0122-646354",
+            "name": "Beth Castangia",
+            "address": "Unit 2/10 Zircon circuit, Rosedale, QLD, 4674",
+            "openDate": "06/21/19"
+    
+        },
+        {
+            "entityType": "TD",
+            "accountNo": "0122-000234",
+            "name": "Beth Castangia",
+            "address": "63 40 Ramsgate Street, Kelvin Grove, QLD, 4059",
+            "openDate": "09/18/16"
+    
+        }
+    ],
+    "derogatory":[
+        {
+            "caseNo": "3M12013U4311",
+            "alertScenario": "RMF",
+            "originatorAccts": 939998077,
+            "originatorAccounts": 18649998,
+            "focusType": "O",
+            "tranId": "#2365s3453853",
+            "tranDate": "12/9/2021"
+        },
+        {
+            "caseNo": "CM92012U4507",
+            "alertScenario": "CIB",
+            "originatorAccts": 12847786,
+            "originatorAccounts": 18649998,
+            "focusType": "B",
+            "tranId": "#233434343855",
+            "tranDate": "11/9/2021"
+        },
+        {
+            "caseNo": "CM52012U2429",
+            "alertScenario": "RMF",
+            "originatorAccts": 429199908,
+            "originatorAccounts": 18649998,
+            "focusType": "B",
+            "tranId": "#3456573453856",
+            "tranDate": "10/9/2021"
+        },
+        {
+            "caseNo": "CM52013U1319",
+            "alertScenario": "CIB",
+            "originatorAccts": 18649998,
+            "originatorAccounts": 18649998,
+            "focusType": "O",
+            "tranId": "#2334373453857",
+            "tranDate": "10/9/2021"
+        }
+    ],
+    "insight-testNetChange":[
+        {
+            "elevatedGeoRisk": "No",
+            "roundingCheck": "No"
+        },
+        {
+            "elevatedGeoRisk": "No",
+            "roundingCheck": "No"
+        },
+        {
+            "elevatedGeoRisk": "No",
+            "roundingCheck": "No"
+        },
+        {
+            "elevatedGeoRisk": "No",
+            "roundingCheck": "No"
+        },
+        {
+            "elevatedGeoRisk": "No",
+            "roundingCheck": "No"
+        }
+    ],
+    "insight-details":[
+        {
+          "caseNo": "CM20130125U00567",
+          "status": "Close",
+          "description": "Closed & Clear",
+          "caseDate": "12 Feb 22",
+          "analyst": "K1715612",
+          "role": "Focus",
+          "comments": "All Relevant Pairs Tested, No Change In Behavior"
+      
+        },
+        {
+          "caseNo": "CM20111210U00568",
+          "status": "Close",
+          "description": "Closed & Clear",
+          "caseDate": "10 Feb 22",
+          "analyst": "K1715612",
+          "role": "Cparty",
+          "comments": "All Relevant Pairs Tested, No Change In Behavior"
+        },
+        {
+          "caseNo": "CM20130215U08374",
+          "status": "Close",
+          "description": "Closed & Clear",
+          "caseDate": "5 Feb 22",
+          "analyst": "K1715612",
+          "role": "Cparty",
+          "comments": "All Relevant Pairs Tested, No Change In Behavior"
+        },
+        {
+          "caseNo": "CM20130215U00569",
+          "status": "Close",
+          "description": "Autoclose",
+          "caseDate": "8 Feb 22",
+          "analyst": "K1715612",
+          "role": "Focus",
+          "comments": "System closure"
+        }
+      ],
+      "insight-materiallySimilarTest":[
+        {
+            "testedTransaction": "Yes",
+            "similarCharacter": "Yes"
+        },
+        {
+            "testedTransaction": "Yes",
+            "similarCharacter": "Yes"
+        },
+        {
+            "testedTransaction": "Yes",
+            "similarCharacter": "Yes"
+        },
+        {
+            "testedTransaction": "Yes",
+            "similarCharacter": "Yes"
+        },
+        {
+            "testedTransaction": "No",
+            "similarCharacter": "No"
+        }
+    
+    ],
+    "insight-test":[
+        {
+            "caseNo": "CM20130125U00567",
+            "date": "25 Feb 22",
+            "status": "Closed & clear",
+            "scenario": "CIB PPA (AC)",
+            "counterGeoRik": "hk(1)",
+            "noTransaction": 1,
+            "totalAmount": "$25,345.25",
+            "rounding": "No"
+        },
+        {
+            "caseNo": "CM20111210U00568",
+            "date": "10 Feb 22",
+            "status": "Closed & clear",
+            "scenario": "CIB PPA (AC)",
+            "counterGeoRik": "hk(1)",
+            "noTransaction": 1,
+            "totalAmount": "$25,345.25",
+            "rounding": "No"
+        },
+        {
+            "caseNo": "CM20130215U00569",
+            "date": "8 Feb 22",
+            "status": "Closed & clear",
+            "scenario": "CIB PPA (AC)",
+            "counterGeoRik": "hk(1)",
+            "noTransaction": 1,
+            "totalAmount": "$25,345.25",
+            "rounding": "No"
+        },
+        {
+            "caseNo": "CM20130215U03339",
+            "date": "6 Feb 22",
+            "status": "Closed & clear",
+            "scenario": "CIB PPA (AC)",
+            "counterGeoRik": "hk(1)",
+            "noTransaction": 1,
+            "totalAmount": "$25,345.25",
+            "rounding": "No"
+        },
+        {
+            "caseNo": "CM22022U13910748",
+            "date": "4 Feb 22",
+            "status": "Closed & clear",
+            "scenario": "CIB PPA (AC)",
+            "counterGeoRik": "hk(1)",
+            "noTransaction": 1,
+            "totalAmount": "$25,345.25",
+            "rounding": "No"
+        }
+    ],
+    "insightDetails-derogatory":[
+        {
+            "sql": "#1",
+            "grpKey":"01 4234-GC-RMF-GC-9827-0",
+            "alertScenario": "RMF",
+            "originator": 939998077,
+            "beneficiary": "18649998",
+            "productType": "Wire",
+            "numberOfTxns": 3,
+            "inSample": "Y",
+            "usd": "$1,258,086.98",
+            "localCurrency": "AUD",
+            "insight": "B2BRMF"
+        },
+        {
+            "sql": "#1",
+            "grpKey":"01 4234 GC-RMF-635342-O",
+            "alertScenario": "RMF",
+            "originator": 429199908,
+            "beneficiary": "009838377",
+            "productType": "Wire",
+            "numberOfTxns": 5,
+            "inSample": "Y",
+            "usd": "$78,927",
+            "localCurrency": "AUD",
+            "insight": "Tested-DEM"
+        },
+        {
+            "sql": "#1",
+            "grpKey":"01 4234 GC-RMF-23434-O",
+            "alertScenario": "RMF",
+            "originator": 429199908,
+            "beneficiary": "74632-23-3",
+            "productType": "Wire",
+            "numberOfTxns": 5,
+            "inSample": "N",
+            "usd": "$32,534",
+            "localCurrency": "AUD",
+            "insight": "UNTESTED-DEM"
+        },
+        {
+            "sql": "#1",
+            "grpKey":"01 4234 GC-RMF-45656-O",
+            "alertScenario": "RMF",
+            "originator": 429199908,
+            "beneficiary": "5030001374",
+            "productType": "Wire",
+            "numberOfTxns": 5,
+            "inSample": "N",
+            "usd": "$22,996",
+            "localCurrency": "AUD",
+            "insight": "UNTESTED-SIMILARLY"
+        },
+        {
+            "sql": "#1",
+            "grpKey":"01 4234 GC-RMF-45467-O",
+            "alertScenario": "RMF",
+            "originator": 429199908,
+            "beneficiary": "999-23-001",
+            "productType": "Wire",
+            "numberOfTxns": 5,
+            "inSample": "N",
+            "usd": "$12,878",
+            "localCurrency": "AUD",
+            "insight": "UNTESTED-EXP"
+        },
+        {
+            "sql": "#1",
+            "grpKey":"01 4234-GC-RMF-GC-9827-0",
+            "alertScenario": "RMF",
+            "originator": 539998077,
+            "beneficiary": "28649998",
+            "productType": "Wire",
+            "numberOfTxns": 3,
+            "inSample": "Y",
+            "usd": "$1,137,075",
+            "localCurrency": "AUD",
+            "insight": "NETWORK OF PAYMENT"
+        }
+    ],
+    "insightDetails-transaction":[
+        {
+            "sql": "#1",
+            "grpKey":"9001-GC-CIB-14-222-0-B",
+            "alertScenario": "Cib Ppa (Ac)",
+            "originator": "0112-4434234",
+            "beneficiary": "077-897876",
+            "productType": "Wire",
+            "numberOfTxns": 18,
+            "inSample": "Y",
+            "usd": "$23,392.45",
+            "localCurrency": "IDR",
+            "insight": "Tested Recently"
+        }
+    ],
+    "insightTestView-3rdQuartile":[
+        {
+            "quartile": "IQR*3",
+            "amount": "$4,000 * 3 = $12,000"
+        },
+        {
+            "quartile": "Add $12.000 to 3rd Quartile",
+            "amount": "$23.500 + $12.000 = $35.500"
+        },
+        {
+            "quartile": "'Adjusted' 3rd Quartile",
+            "amount": "$35,500"
+        }
+    ],
+    "insiteTestView-datePoint":[
+        {
+            "casenumber": "CM20130125U00567",
+            "totalAlertedamount": "$25,000.00"
+        },
+        {
+            "casenumber": "CM20111210U00568",
+            "totalAlertedamount": "$18,000.00"
+        },
+        {
+            "casenumber": "CM20130215U00569",
+            "totalAlertedamount": "$20,000.00"
+        },
+        {
+            "casenumber": "CM20130215U03339",
+            "totalAlertedamount": "$23000.00"
+        },
+        {
+            "casenumber": "CM22022U13910748",
+            "totalAlertedamount": "$23000.00"
+        }
+    ],
+    "insightTestView-iqrHistory":[
+        {
+            "quartile": "1st Quartile",
+            "amount": "$19,500.00"
+        },
+        {
+            "quartile": "3rd Quartile",
+            "amount": "$23,500.oo"
+        },
+        {
+            "quartile": "Interquartile Range",
+            "amount": "$4,000.oo"
+        }
+    ],
+    "report":[
+        {
+            "entityId": 99679,
+            "country": "Au",
+            "jurisdiction": "AUNSW9",
+            "customerNo": "AU-002267654",
+            "relationship": "Likely related",
+            "matchRule": "MED ID",
+            "name": "Smith robert Last: robert First: smith ",
+            "identifiers": "DOB: 12/11/1978 Home Phone: 702-919-1300 Email: bsmith@work.com RES Address: 123 Main Street, Las Vegas NV 89132  MED ID:  443237811 2 ",
+            "database": "Private"
+        },
+        {
+            "entityId": 99679,
+            "country": "HK",
+            "jurisdiction": "HKIB",
+            "customerNo": "HKK-230226543",
+            "relationship": "Likely related",
+            "matchRule": "Passport",
+            "name": "Smith Bob Last: Bob     First: smith ",
+            "identifiers": "dob:  11/12/1978 home phone:  702-919-1300 Mail address:  1515 Adela Lane      Passport:  R2295683 - AU",
+            "database": "Consumer"
+        },
+        {
+            "entityId": 99679,
+            "country": "AU",
+            "jurisdiction": "AUQD8",
+            "customerNo": "AU-234-323-99",
+            "relationship": "Likely related",
+            "matchRule": "Cell Phone",
+            "name": "Smith Bob Last: Bob     First: smith ",
+            "identifiers": "dob:  12/11/1978 cell phone:  7512-353-8633 email:  bsmith@work.com, supportengine@hotmail.com Mail Address:  1304 Poppy Hills Dr, Blacklick, OH, USA",
+            "database": "Consumer"
+        },
+        {
+            "entityId": 1015,
+            "country": "HK",
+            "jurisdiction": "HKDA",
+            "customerNo": "HKK-002267654",
+            "relationship": "Likely related",
+            "matchRule": "Mobile Phone",
+            "name": "Smith B Last: B     First: smith ",
+            "identifiers": "Mobile:  512-353-8633 email:  bsmith@work.com  Address:  Persiaran CapSquare, Off Jalan Munshi Abdullah ",
+            "database": "HR"
+        },
+        {
+            "entityId": 1016,
+            "country": "HK",
+            "jurisdiction": "HKDA",
+            "customerNo": "HKK-2302267654",
+            "relationship": "Likely related",
+            "matchRule": "TFN ID",
+            "name": "Smith Rob Last: Rob     First: smith ",
+            "identifiers": "Address:  123 E Main St TFN: 293-90-9090",
+            "database": "Consumer"
+        }   
+    ]
+
+      
+      
+}

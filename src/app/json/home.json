@@ -1,0 +1,68 @@
+[
+  {
+    "timeSpent": 45,
+    "action": "Low Risk",
+    "caseNo": "CM72012U6572",
+    "caseDate": "01 Mar 22",
+    "focusCustID": 39424982,
+    "customerName": "Beth Castangia",
+    "analyst": "TK458100, NH834212",
+    "insightSummary": "<strong>&bull;</strong> Pair was cleared with similar amount in last 12 months, no material change behaviour.<br><strong>&bull;</strong> 4 approved popular counter-parties.<br><strong>&bull;</strong> No deregotory insight found.",
+    "view": "View"
+  },
+  {
+    "timeSpent": 17,
+    "action": "Full View",
+    "caseNo": "CM32012U5267",
+    "caseDate": "12 Sep 21",
+    "focusCustID": 1560719992,
+    "customerName": "Kusha Mary",
+    "analyst": "TK8334253",
+    "insightSummary": "<strong>&bull;</strong> Focus closely related to entity which was part of an escalated case.<br><strong>&bull;</strong> Effective risk of the focus has increased.",
+    "view": "View1"
+  },
+  {
+    "timeSpent": 31,
+    "action": "Full View",
+    "caseNo": "CM12013U4311",
+    "caseDate": "31 Jan 22",
+    "focusCustID": 39328861,
+    "customerName": "Lucilia Prescott",
+    "analyst": "TK8334253",
+    "insightSummary": "<strong>&bull;</strong> Rounded nexus with Rapid movement of funds detected.<br><strong>&bull;</strong> Previously approved pair showing significant change in behavior.<br><strong>&bull;</strong> Entity possibly related to one of the counter-parties is part of the sanction list (country code RU).",
+    "view": "View2"
+  },
+  {
+    "timeSpent": 80,
+    "action": "Low Risk",
+    "caseNo": "CM102012U443",
+    "caseDate": "26 Oct 21",
+    "focusCustID": 214520941,
+    "customerName": "Lucilia Prescott",
+    "analyst": "TK8334253",
+    "insightSummary": "<strong>&bull;</strong> Previous REQSAR’ed counter-party, similar amounts in 6 day window.<br><strong>&bull;</strong> Recorded transactions with new product type.",
+    "view": "View3"
+  },
+  {
+    "timeSpent": 10,
+    "action": "Low Risk",
+    "caseNo": "CM82013U1925",
+    "caseDate": "22 Oct 21",
+    "focusCustID": 176228246,
+    "customerName": "Roxanne Casbourne",
+    "analyst": "TK8032764",
+    "insightSummary": "<strong>&bull;</strong> Previously cleared and no material changes.",
+    "view": "View"
+  },
+  {
+    "timeSpent": 23,
+    "action": "Full View",
+    "caseNo": "CM82012U9615",
+    "caseDate": "15 Oct 21",
+    "focusCustID": 936980034,
+    "customerName": "Quincey Schoolcroft",
+    "analyst": "TK8334253",
+    "insightSummary": "<strong>&bull;</strong> Previously tested in the last 6 month and no material change in behavior.",
+    "view": "View"
+  }
+]

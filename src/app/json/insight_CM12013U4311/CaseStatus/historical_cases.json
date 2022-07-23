@@ -1,0 +1,41 @@
+[
+  {
+    "caseNo": "CM2334U2225",
+    "alertScnerio": "CIB PPA (AC)",
+    "status": "Closed",
+    "description": "Escalated",
+    "totalAmount": "$1,502.23",
+    "caseDate": "3 Nov 21",
+	"caseDispDate": "13 Jan 22",
+    "analyst": "KL745643",
+    "role": "Focus",
+	"relation": "Same Entity",
+    "comments": "The Focus income statement was fraudulent. All the clients of focus had the same \"Secretary\". we have raised it to the operation team on status call (15-02-2021). the report has been attached with the case."
+  },
+  {
+    "caseNo": "CM46578U1112",
+    "alertScnerio": "RMF",
+    "status": "Closed",
+    "description": "RM Follow-up",
+    "totalAmount": "$3,901.2",
+    "caseDate": "3 Jan 20",
+	"caseDispDate": "1 Mar 22",
+    "analyst": "NP845734 (Inactive)",
+    "role": "Counter-party",
+	"relation": "Same Entity",
+    "comments": "The focus made multiple transactions with less than 1000 USD, one of the counter-parties matched with the details found in a youtube scam investigation video. We have given RM to check along with the all the non-alerted transactions. We found 89 such transactions in last 3 months on Focus's account."
+  },
+  {
+    "caseNo": "CM33345U5453",
+    "alertScnerio": "LRT",
+    "status": "Closed",
+    "description": "Escalated",
+    "totalAmount": "$100,500",
+    "caseDate": "3 Jan 19",
+	"caseDispDate": "1 Mar 22",
+    "analyst": "KL345345",
+    "role": "Focus",
+	"relation": "Same Entity",
+    "comments": "Customer provided additional details retailed to his abroad income. We tagged this account as \"Used_For_Business_Purpose\".  "
+  }
+]

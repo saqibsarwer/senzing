@@ -1,0 +1,10 @@
+<div class="slider-bar-menu">
+  <ul class="px-0">
+    <li *ngFor="let menu of menus" [ngClass]="{ active: isActive(menu.route) }" (click)="navigate(menu.route)">
+      <button>
+        <img [src]="menu.src" />
+        <span>{{ menu.name }}</span>
+      </button>
+    </li>
+  </ul>
+</div>

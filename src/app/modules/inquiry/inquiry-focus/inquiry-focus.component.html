@@ -1,0 +1,310 @@
+<div class="right-content">
+  <section class="">
+    <div class="boxed-card pb-5">
+      <div class="card primary-card header">
+        <div class="row">
+          <div class="d-flex">
+            <div class="col-6 back d-flex align-items-center">
+              <a [routerLink]="'/inquiry'"><img src="../../../../assets/backArrow.svg" class="mr-2" />Back</a>
+              <p class="text m-0">The case under investigation - <span>CM32012U5267</span></p>
+            </div>
+            <div class="col-6 centerRight">
+              <!-- <button id="focusProfile"><img src="../../../../assets/focusProfile.png" class="mr-2">Focus
+				  Profile</button> -->
+              <button id="download"><img src="../../../../assets/downloadDetails.png" class="mr-2">Download</button>
+              <button id="print"><img src="../../../../assets/print.png" class="mr-2">Print</button>
+              <div class="focusRiskBox ml-15">
+                <p id="focus" class="m-0">Focus Details
+                <img class="ml-2" id="focusImg" src="../../../../assets/down-arrow.svg" alt="" />
+                </p>
+              </div>
+              <!-- <div class="dropdown ml-15">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Focus Risk
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" [routerLink]="'/inquiry/details'">Basic Details</a>
+                  <a class="dropdown-item" [routerLink]="'/inquiry/details/insight-details'">Insight Details</a>
+                  <a class="dropdown-item active" [routerLink]="'/inquiry/inquiry-focus'">Focus Risk</a>
+                  <a class="dropdown-item" [routerLink]="'/inquiry/counter-party-details'">Counter Party Details</a>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 responsive-column1 pt-20">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Probably same as focus</p>
+            </div>
+            <div class="card primary-card as-focus mt-2 pb-0">
+              <div class="card-body scroll-card p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="pt-0">Entity Type</th>
+                      <th scope="col" class="pt-0">Account No</th>
+                      <th scope="col" class="pt-0">Names</th>
+                      <th scope="col" class="pt-0">Address</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of getinquiryFocus">
+                      <td>
+                        <span class="round-cube" [ngClass]="{
+                            status2: data.entityType == 'Saving',
+                            status1:
+                              data.entityType == 'Wealth' ||
+                              data.entityType == 'TD'
+                          }">
+                          {{ data.entityType }}
+                        </span>
+                      </td>
+                      <td>{{ data.acNo }}</td>
+                      <td>{{ data.names }}</td>
+                      <td>{{ data.address }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-left.png" />
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active">1</a></li>
+                  <li class="page-item"><a class="page-link">2</a></li>
+                  <li class="page-item"><a class="page-link">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-right.png" />
+                    </a>
+                  </li>
+
+                  <li class="pagintion-select">
+                    <mat-paginator [length]="10" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page" disabled>
+                    </mat-paginator>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------->
+        <div class="col-6 responsive-column2 pt-20">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Possible Related to focus</p>
+            </div>
+            <div class="card primary-card mt-2  as-focus pb-0">
+              <div class="card-body scroll-card p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="pt-0">Product</th>
+                      <th scope="col" class="pt-0">Account No</th>
+                      <th scope="col" class="pt-0">Names</th>
+                      <th scope="col" class="pt-0">Address</th>
+                      <th scope="col" class="pt-0">Tenure (yr)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of getpossibleRelated">
+                      <td>
+                        <span class="round-cube" [ngClass]="{
+                            status2: data.product == 'LN',
+                            status1:
+                              data.product == 'Wealth' || data.product == 'TD'
+                          }">
+                          {{ data.product }}
+                        </span>
+                      </td>
+                      <td>{{ data.acNo }}</td>
+                      <td>{{ data.names }}</td>
+                      <td>{{ data.address }}</td>
+                      <td>{{ data.tenure }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-left.png" />
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active">1</a></li>
+                  <li class="page-item"><a class="page-link">2</a></li>
+                  <li class="page-item"><a class="page-link">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-right.png" />
+                    </a>
+                  </li>
+                  <li class="pagintion-select">
+                    <mat-paginator [length]="10" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page" disabled>
+                    </mat-paginator>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row bottom-row">
+        <div class="col-6 responsive-column3 pl-0">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Focus Level Risk</p>
+            </div>
+            <div class="card primary-card mt-2 focus-level pb-0">
+              <div class="card-body scroll-card p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="pt-0">Risk</th>
+                      <th scope="col" class="pt-0">Details</th>
+                      <th scope="col" class="pt-0">Acct Open Date</th>
+                      <th scope="col" class="pt-0">Last updated</th>
+                      <th scope="col" class="pt-0">New</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of getfocusLevel">
+                      <td>{{ data.risk }}</td>
+                      <td>{{ data.details }}</td>
+                      <td>{{ data.date }}</td>
+                      <td>{{ data.updated }}</td>
+                      <td>
+                        <span class="round-cubes" [ngClass]="{
+                            status4: data.new == ' ',
+                            status3: data.new == 'New' || data.new == 'TD'
+                          }">
+                          {{ data.new }}
+                        </span>
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-left.png" />
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active">1</a></li>
+                  <li class="page-item"><a class="page-link">2</a></li>
+                  <li class="page-item"><a class="page-link">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-right.png" />
+                    </a>
+                  </li>
+                  <li class="pagintion-select">
+                    <mat-paginator [length]="10" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page" disabled>
+                    </mat-paginator>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------->
+        <div class="col-6 responsive-column4 pr-0">
+          <div class="card-details">
+            <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Network Risk</p>
+            </div>
+            <div class="card primary-card network-risk mt-2 pb-0">
+              <div class="card-body scroll-card p-0">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="pt-0">Entity</th>
+                      <th scope="col" class="pt-0">Account No</th>
+                      <th scope="col" class="pt-0">Risk Reason</th>
+                      <th scope="col" class="pt-0">Role</th>
+                      <th scope="col" class="pt-0">Relation</th>
+                      <th scope="col" class="pt-0">Date</th>
+                      <th scope="col" class="pt-0">New</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let data of getnetworkRisk; let i = index;">
+                      <td>{{ data.entity }}</td>
+                      <td>{{ data.acNo }}</td>
+                      <td>
+                        <span class="round-cubes" [ngClass]="{
+                            status6: data.riskReason == 'Escalated',
+                            status4:
+                              data.riskReason == 'Escalated' ||
+                              data.riskReason == 'Escalated'
+                          }">
+                          {{ data.riskReason }}
+                        </span>
+                      </td>
+                      <td>{{ data.role }}</td>
+                      <td>
+                        <div *ngIf="data.relation=='Derived' && i==1; else relationLink">
+                          <a routerLink="/report">{{ data.relation }}</a>
+                        </div>
+                        <ng-template #relationLink>
+                          <a>{{ data.relation }}</a>
+                        </ng-template>
+                      </td>
+                      <td>{{ data.date }}</td>
+                      <td>
+                        <span class="round-cubes" [ngClass]="{
+                            status4: data.new == ' ',
+                            status3: data.new == 'New' || data.new == 'TD'
+                          }">
+                          {{ data.new }}
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-left.png" />
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active">1</a></li>
+                  <li class="page-item"><a class="page-link">2</a></li>
+                  <li class="page-item"><a class="page-link">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link">
+                      <img src="../../../../assets/arrow-end-right.png" />
+                    </a>
+                  </li>
+                  <li class="pagintion-select">
+                    <mat-paginator [length]="10" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page" disabled>
+                    </mat-paginator>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

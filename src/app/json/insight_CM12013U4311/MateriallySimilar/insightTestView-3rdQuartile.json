@@ -1,0 +1,14 @@
+[
+    {
+        "quartile": "IQR*2.5",
+        "amount": "$7,810 * 2.5 = $19,526"
+    },
+    {
+        "quartile": "Add $19,526 to 3rd Quartile",
+        "amount": "$7,810 + $19,526 = $27,337"
+    },
+    {
+        "quartile": "'Adjusted' 3rd Quartile",
+        "amount": "$27,337"
+    }
+]

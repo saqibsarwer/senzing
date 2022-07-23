@@ -1,0 +1,53 @@
+[
+    {
+        "caseNo": "3M12013U4311",
+        "alertScenario": "RMF",
+        "originatorAccts": "9399980727",
+        "BenAcct": "1864999811",
+        "focusType": "O",
+        "tranId": "#2365s3453853",
+		"tranamount":"1259996.98",
+        "tranDate": "12 Jan 22"
+	},
+	{
+        "caseNo": "CM52013U1319",
+        "alertScenario": "CIB",
+        "originatorAccts":"1284778633",
+        "BenAcct": "9399980727",
+        "focusType": "O",
+        "tranId": "#2334373453857",
+		"tranamount":"2299086.98",
+        "tranDate": "10 Jan 22"
+    },
+    {
+        "caseNo": "CM92012U4507",
+        "alertScenario": "CIB",
+        "originatorAccts": "0012328322",
+        "BenAcct": "1284778633",
+        "focusType": "B",
+        "tranId": "#233434343855",
+		"tranamount":"3345656.98",
+        "tranDate": "1 Jan 22"
+    },
+    {
+        "caseNo": "CM52012U2429",
+        "alertScenario": "RMF",
+        "originatorAccts": "3323484332",
+        "BenAcct": "0012328322",
+        "focusType": "B",
+        "tranId": "#3456573453856",
+		"tranamount":"7224234.98",
+        "tranDate": "21 Dec 22"
+    },
+    {
+        "caseNo": "CM52013U1319",
+        "alertScenario": "CIB",
+        "originatorAccts": "1864999811",
+        "BenAcct": "3323484332",
+        "focusType": "O",
+        "tranId": "#9492384329482",
+		"tranamount":"9058086.98",
+        "tranDate": "15 Dec 22"
+    }
+    
+]

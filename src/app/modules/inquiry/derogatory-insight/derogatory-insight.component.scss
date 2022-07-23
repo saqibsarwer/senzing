@@ -1,0 +1,259 @@
+.header {
+  padding: 24px 20px;
+
+  .back {
+    a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #3B495B;
+      border-bottom: 1px dashed #3B495B;
+      text-decoration: none;
+      padding: 0 0 2px 0px;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      color: #3B495B;
+      margin-left: 50px !important;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  button#download {
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+    margin: 0 10px;
+  }
+
+  #print {
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #E1E3F0;
+    color: #718299;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 14px;
+  }
+}
+
+.card-details .heading p {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  color: #3B495C;
+  margin: 0;
+}
+
+::ng-deep {
+  .app-graph kendo-card {
+    height: 330px !important;
+    margin: 0 !important;
+  }
+}
+
+th,
+td {
+  height: 50px;
+}
+svg.ngx-charts{
+  width: 100%;
+}
+
+.responsive-column1 {
+  ::ng-deep{
+    .ngx-charts-outer {
+      width: 100% !important;
+    }
+    svg.ngx-charts{
+      width: 100% !important;
+    }
+  }
+}
+
+.responsive-column2 {
+  .table {
+    th {
+      height: 40px !important;
+      vertical-align: top !important;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #ffffff;
+    }
+  }
+  .card-body.scroll-card {
+    height: 280px;
+    overflow: auto;
+  }
+}
+
+.responsive-column3 {
+  .card.primary-card{
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      // text-transform: capitalize;
+      color: #3B495C;
+  }
+  small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #718299;
+  }
+  p.details {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 141.52%;
+    color: #3B495B;
+  }
+}
+}
+
+.responsive-column4 {
+  .info{
+  p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #3B495C;
+  }
+}
+}
+
+.responsive-column5 {
+label{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(35, 46, 104, 0.69);
+}
+textarea#exampleTextarea {
+  border: 1px solid #E1E3F0;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #3B495B;
+  padding: 10px;
+}
+button{
+  border: 1px solid #FF6600;
+    border-radius: 4px;
+    background: #FF6600;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 14px;
+    margin: 12px 0 0 16px;
+}
+}
+
+.bottom-row{
+  .primary-card {
+    height: 200px;
+  }
+}
+/*---------pagination----------------*/
+::ng-deep {
+  .pagination {
+    .pagintion-select {
+      width: 100%;
+
+      .mat-paginator-container {
+        justify-content: space-between;
+      }
+    }
+
+    button.mat-focus-indicator {
+      display: none;
+    }
+
+    mat-select {
+      padding: 5px 6px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 2e-06) 0%, rgba(0, 0, 0, 0.02) 100%), #F5F5F5;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 2px;
+    }
+
+    .mat-paginator-page-size-select {
+      margin-top: 3px;
+    }
+
+    .mat-paginator-page-size-label {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #3B495B;
+    }
+
+    .mat-paginator-range-label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3B495B;
+      margin: 0 0 0 0 !important;
+      font-weight: bolder;
+    }
+  }
+}
+
+/*---------media----------------*/
+@media screen and (max-width: 1024px) {
+  .col-4.h-100.app-graph,
+  .col-8.case-details.detail-table,
+  .col-4.note,
+  .col-5.comments,
+  .col-3.impression {
+    width: 100%;
+  }
+  .col-5.comments {
+    padding-top: 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .col-8.case-details.detail-table {
+    margin: 10px 10px 10px 10px !important;
+    width: 96%;
+  }
+  .case-details table th {
+    font-size: 11px;
+  }
+  .case-details table td {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .responsive-column1, .responsive-column2, .responsive-column3, .responsive-column4, .responsive-column5{
+    width: 100% !important;
+  }
+  .responsive-column2 {
+    margin: 15px 0 0 0;
+}
+.col-4.responsive-column4 {
+  margin: 15px 0;
+}
+}

@@ -1,0 +1,100 @@
+<div class="right-content">
+  <section class="">
+     <div class="boxed-card pb-4">
+        <div class="card primary-card mb-4 header">
+          <div class="row">
+            <div class="d-flex">
+              <div class="col-6 back d-flex align-items-center">
+                <a [routerLink]="'/inquiry'"><img src="../../../../assets/backArrow.svg" class="mr-2" />Back</a>
+                <p class="text m-0">The case under investigation - <span>{{ showCase ? showCase : 'CM72012U6572'}}</span></p>
+              </div>
+              <div class="col-6 centerRight">
+                <!-- <button id="focusProfile"><img src="../../../../assets/focusProfile.png" class="mr-2">Focus
+                  Profile</button> -->
+                <button id="download"><img src="../../../../assets/downloadDetails.png" class="mr-2">Download</button>
+                <button id="print"><img src="../../../../assets/print.png" class="mr-2">Print</button>
+                <div class="dropdown ml-15">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Counter Party Details
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" [routerLink]="'/inquiry/details'" [style]="showCase ? 'display: none' : 'display: block'">Basic Details</a>
+                    <a *ngIf="!showCase; else hideInsight" class="dropdown-item" [routerLink]="['/inquiry/details/insight-details']">Insight Details</a>
+                    <ng-template #hideInsight>
+                     <a class="dropdown-item" [routerLink]="['/inquiry/details/insight-details',{tab:2,case:showCase}]">Insight Details</a>
+                   </ng-template>
+                    <a class="dropdown-item" [routerLink]="'/inquiry/counter-party-details'" routerLinkActive="active" style="min-width: 195px;">Counter Party Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+           <div class="heading d-flex">
+              <img class="icon-img" src="../../../../assets/bubble.png" />
+              <p class="ml-2">Counter Parties</p>
+           </div>
+           <div class="card primary-card info mt-2 pb-0 tabs-view">
+              <div class="card-body p-0">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                          <th scope="col">Entity Type</th>
+                          <th scope="col">Relation</th>
+                          <th scope="col">Account No</th>
+                          <th scope="col">Customer No</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Address</th>
+                          <th scope="col">Type</th>
+                          <th scope="col">Insight</th>
+                          <th scope="col">Memo</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="showCase; else counterParty">
+                        <tr *ngFor="let data of getCounterPartyDetails; let i=index;">
+                          <td><span class="round-cube " [ngClass]="{ 'statusGreen' : data.entityType == 'Saving', 'statusOrange' : ((data.entityType == 'Current') || (data.entityType == 'TD')) }">{{ data.entityType }}</span></td>
+                          <td [routerLink]="i==0 ? ['/inquiry/derived', {case: showCase}] : []" [style]="i==0 ? 'cursor: pointer; color:#00f' : '' ">{{ data.relation }}</td>
+                          <td>{{ data.accountNo }}</td>
+                          <td>{{ data.customerNo }}</td>
+                          <td>{{ data.name }}</td>
+                          <td>{{ data.address }}</td>
+                          <td>{{ data.type }}</td>
+                          <td><span class="round-cube ">
+                            <a style="text-decoration: none; color:red; font-weight: bold;">{{ data.insight }}</a></span>
+                          </td>
+                          <td>{{ data.memo }}</td>
+                        </tr>
+                    </tbody>
+                    <ng-template #counterParty>
+                      <tbody>
+                        <tr *ngFor="let data of getCounterPartyDetails1">
+                          <td>{{ data.entityType }}</td>
+                          <td>{{ data.relation }}</td>
+                          <td>{{ data.accountNo }}</td>
+                          <td>{{ data.customerNo }}</td>
+                          <td>{{ data.name }}</td>
+                          <td>{{ data.address }}</td>
+                          <td>{{ data.type }}</td>
+                          <td><span class="round-cube">{{ data.insight }}</span></td>
+                          <td>{{ data.memo }}</td>
+                        </tr>
+                    </tbody>
+                    </ng-template>
+                  </table>
+              </div>
+           </div>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination pt-20">
+              <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/left.svg" /></a></li>
+              <li class="page-item"><a class="page-link active" href="javascript:void(0);">1</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0);"><img src="../../../assets/right.svg" /></a></li>
+          </ul>
+        </nav>
+     </div>
+  </section>
+</div>
